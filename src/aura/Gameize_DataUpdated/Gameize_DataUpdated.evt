@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="dataUpdated">
+    <!-- dataFavorite or dataHistory -->
+    <aura:attribute name="whichData" type="String" />
+    <aura:attribute name="data" type="String" />
+</aura:event>

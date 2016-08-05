@@ -1,0 +1,24 @@
+<aura:component description="Gameize" access="global">
+    <aura:attribute name="gameList" type="Object[]" />
+    <aura:attribute name="debug" type="Boolean" default="false"/>
+    <aura:attribute name="activeTabNumber" type="String" default="1" />
+
+    <c:ETLC_ApexBridge debugClient="{!v.debug}" debugServer="{!v.debug}" />
+    <c:Gameize_Resources />
+    <c:Gameize_Helper debug="{!v.debug}" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div class="slds">
+        <div class="slds-tabs--default">
+            <ul class="slds-tabs--default__nav" role="tablist">
+                <li class="{! 'slds-tabs--scoped__item slds-text-heading--label ' + (v.activeTabNumber == '1'?'slds-active':'')}" title="Item One" role="presentation">
+                    <a onclick="{!c.changeTab}" class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="1" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Item One</a>
+                </li>
+            </ul>
+            <div class="{! 'slds-tabs--scoped__content ' + (v.activeTabNumber == '1'? 'slds-show': 'slds-hide')}" role="tabpanel" aria-labelledby="tab-default-1__item">
+                <c:Gameize_Select debug="{!v.debug}" gameList="{!v.gameList}" />
+            </div>
+        </div>
+
+    </div>
+</aura:component>

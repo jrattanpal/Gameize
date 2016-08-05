@@ -1,0 +1,10 @@
+<aura:component description="Gameize">
+    <aura:attribute name="gameList" type="Object[]" />
+    <aura:attribute name="debug" type="Boolean" default="false"/>
+
+    <form class="slds-form--inline">
+        <div class="slds-form-element">
+            <button class="slds-button slds-button--brand" type="button" onclick="{!c.gameizeme}"}>Gameize me!</button>
+        </div>
+    </form>
+</aura:component>
