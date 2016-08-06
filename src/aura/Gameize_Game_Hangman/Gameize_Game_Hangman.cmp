@@ -1,0 +1,64 @@
+<aura:component >
+    <aura:attribute name="words" type="String[]" />
+    <aura:attribute name="alpha" type="String[]" />
+    <aura:attribute name="bravo" type="String[]" />
+    <aura:attribute name="running" type="Boolean" default="false" />
+    <aura:attribute name="failnum" type="Integer" default="0" />
+    <aura:attribute name="advising" type="Integer" default="0" />
+    <aura:attribute name="index" type="Integer" />
+    <aura:attribute name="score" type="Integer" default="0"/>
+    <aura:attribute name="alpha_index" type="Integer" default="0" />
+    <aura:attribute name="bravo_index" type="Integer" default="0" />
+    <aura:attribute name="lettersFirstRow" type="String[]" default="A,B,C,D,E,F,G,H,I,J,K,L,M" />
+    <aura:attribute name="lettersSecondRow" type="String[]" default="N,O,P,Q,R,S,T,U,V,W,X,Y,Z" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <fieldset class="slds-form--compound">
+        <div class="form-element__group">
+            <div class="slds-form-element__row">
+                <div class="slds-form-element slds-size--1-of-3">
+                    <label class="slds-form-element__label" for="input-01">Score</label>
+                    <ui:outputText aura:id="score" class="slds-input" value="0" />
+                </div>
+                <div class="slds-form-element slds-size--1-of-3">
+                    <label class="slds-form-element__label" for="input-02">Word</label>
+                    <ui:outputText aura:id="word" class="slds-input" value="    --- Hangman ---" />
+                </div>
+                <div class="slds-form-element slds-size--1-of-3">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="slds-form--compound">
+        <div class="form-element__group">
+            <div class="slds-form-element__row">
+                <div class="slds-form-element slds-size--1-of-3">
+                    <label class="slds-form-element__label" for="input-01">:Fails (6)</label>
+                    <ui:outputText aura:id="lives" class="slds-input" value="0" />
+                </div>
+                <div class="slds-form-element slds-size--1-of-3">
+                    <label class="slds-form-element__label" for="input-02">Lives</label>
+                    <ui:outputText aura:id="tried" class="slds-input" value="Click GO for a word" />
+                </div>
+                <div class="slds-form-element slds-size--1-of-3">
+                    <button aura:id="go" class="slds-button slds-button--neutral" onclick="{!c.go}">Go</button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    
+    <table>
+        <tr>
+            <aura:iteration items="{!v.lettersFirstRow}" var="obj" indexVar="index" >
+                <th><button class="slds-button slds-button--neutral slds-not-selected" onclick="{!c.seek}" data-letter="{!obj}">{!obj}</button></th>
+            </aura:iteration>
+        </tr>
+        <tr>
+            <aura:iteration items="{!v.lettersSecondRow}" var="obj">
+                <th><button class="slds-button slds-button--neutral slds-not-selected" onclick="{!c.seek}" data-letter="{!obj}">{!obj}</button></th>
+            </aura:iteration>
+        </tr>
+    </table>
+</aura:component>
