@@ -1,0 +1,10 @@
+<!--
+ - Created by jrattanpal on 2016-08-05.
+ -->
+
+<aura:documentation>
+	<aura:description>Documentation for Gameize_Helper</aura:description>
+	<aura:example name="Gameize_Helper" ref="Gameize_Helper" label="Gameize_Helper">
+		Example for Gameize_Helper
+	</aura:example>
+</aura:documentation>

@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="gameList" type="Object[]" />
+    <aura:attribute name="debug" type="Boolean" default="false"/>
+    <aura:attribute name="dataFavorite" type="Object[]" />
+    <aura:attribute name="dataHistory" type="Object[]" />
+    
+    <aura:registerEvent name="Gameize_ShowGame" type="c:Gameize_ShowGame"/>
+    <ui:button label="test" press="{!c.onPress}" />
+</aura:component>

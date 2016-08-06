@@ -1,10 +1,53 @@
 <aura:component description="Gameize">
     <aura:attribute name="gameList" type="Object[]" />
     <aura:attribute name="debug" type="Boolean" default="false"/>
+    <aura:attribute name="gameSelected" type="Object" />
+    <aura:attribute name="preGameSelectedId" type="Integer" default="-1"/>
+    <aura:attribute name="isSelectedGameFavorite" type="Boolean" default="false" />
+    <aura:attribute name="dataFavorite" type="Object[]" />
+    <aura:attribute name="dataHistory" type="Object[]" />
+    <aura:attribute name="maxHistoryItems" type="Integer" default="10" />
+
+
+    <c:ETLC_ApexBridge aura:id="ApexBridge" debugClient="{!v.debug}" debugServer="{!v.debug}" />
+    <c:Gameize_Helper aura:id="Gameize_Helper" debug="{!v.debug}" />
+    <aura:registerEvent name="Gameize_DataUpdated" type="c:Gameize_DataUpdated"/>
+    <aura:handler event="c:Gameize_ShowGame" action="{!c.handleShowGameEvent}"/>
+
 
     <form class="slds-form--inline">
         <div class="slds-form-element">
-            <button class="slds-button slds-button--brand" type="button" onclick="{!c.gameizeme}"}>Gameize me!</button>
+            <button class="slds-button slds-button--brand" type="button" onclick="{!c.gameizeMe}">Gameize me!</button>
         </div>
     </form>
+    <div role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-hide" aura:id="modaldialog">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header">
+                <button class="slds-button slds-button--icon-inverse slds-modal__close" onclick="{!c.hideModal}">
+                    <c:svg ariaHidden="true" class="slds-button__icon slds-button__icon--large" xlinkHref="{! $Resource.SLDS + '/assets/icons/action-sprite/svg/symbols.svg#close'}" />
+                    <span class="slds-assistive-text" >Close</span>
+                </button>
+                <h2 id="header43" class="slds-text-heading--medium">{!v.gameSelected.name}</h2>
+                <h6 id="header43" class="slds-text-heading--xsmall">{!v.gameSelected.desc}</h6>
+                <c:Gameize_Helper aura:id="Gameize_Helper_dialog" debug="{!v.debug}" />
+            </div>
+            <div class="slds-modal__content slds-p-around--medium">
+                <div>
+
+                    <div aura:id="gameContainer">
+                    </div>
+                </div>
+            </div>
+            <div class="slds-modal__footer">
+                <aura:if isTrue="{! v.isSelectedGameFavorite == true}">
+                    <button class="slds-button slds-button--neutral" onclick="{!c.removeAsFavorite}">Remove as Favorite</button>
+                    <aura:set attribute="else">
+                        <button class="slds-button slds-button--neutral" onclick="{!c.markAsFavorite}">Mark as Favorite</button>
+                    </aura:set>
+                </aura:if>
+                <button class="slds-button slds-button--neutral" onclick="{!c.hideModal}">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div class="slds-backdrop slds-backdrop--hide" aura:id="backdrop"></div>
 </aura:component>

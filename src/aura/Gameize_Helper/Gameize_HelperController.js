@@ -6,8 +6,8 @@
      */
     log : function(component, event, helper) {
         var params = event.getParam('arguments');
-        if (component.get('v.debug') == true && params && params[0]) {
-            console.log(params[0].m);
+        if (component.get('v.debug') == true && params) {
+            console.log(params.message);
         }
     },
     /**
@@ -44,15 +44,15 @@
      */
     showToast : function(component, event, helper) {
         var params = event.getParam('arguments');
-        if (params && params[0]) {
+        if (params) {
             $A.createComponents([
                     ["ui:message",{
-                        "title" : params[0].t,
-                        "severity" : params[0].s,
+                        "title" : params.title,
+                        "severity" : params.severity,
                         "closable" : true
                     }],
                     ["ui:outputText",{
-                        "value" : params[0].m
+                        "value" : params.message
                     }]
                 ],
                 function(components, status){

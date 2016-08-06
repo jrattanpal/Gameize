@@ -1,24 +1,47 @@
 <aura:component description="Gameize" access="global">
-    <aura:attribute name="gameList" type="Object[]" />
     <aura:attribute name="debug" type="Boolean" default="false"/>
     <aura:attribute name="activeTabNumber" type="String" default="1" />
+    <aura:attribute name="gameList" type="Object[]" />
+    <aura:attribute name="dataFavorite" type="Object[]" />
+    <aura:attribute name="dataHistory" type="Object[]" />
+    <aura:attribute name="maxHistoryItems" type="Integer" default="10" />
 
-    <c:ETLC_ApexBridge debugClient="{!v.debug}" debugServer="{!v.debug}" />
+    <c:ETLC_ApexBridge aura:id="ApexBridge" debugClient="{!v.debug}" debugServer="{!v.debug}" />
     <c:Gameize_Resources />
-    <c:Gameize_Helper debug="{!v.debug}" />
-
+    <c:Gameize_Helper aura:id="Gameize_Helper" debug="{!v.debug}" />
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="Gameize_DataUpdated" event="c:Gameize_DataUpdated" action="{!c.handleDataUpdatedEvent}"/>
+    <aura:handler event="c:Gameize_ShowGame" action="{!c.handleShowGameEvent}"/>
+
+
     <div class="slds">
         <div class="slds-tabs--default">
             <ul class="slds-tabs--default__nav" role="tablist">
                 <li class="{! 'slds-tabs--scoped__item slds-text-heading--label ' + (v.activeTabNumber == '1'?'slds-active':'')}" title="Item One" role="presentation">
-                    <a onclick="{!c.changeTab}" class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="1" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Item One</a>
+                    <a onclick="{!c.changeTab}" class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="1" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">
+                        Gameize
+                    </a>
+                </li>
+                <li class="{! 'slds-tabs--scoped__item slds-text-heading--label ' + (v.activeTabNumber == '2'?'slds-active':'')}" title="Item One" role="presentation">
+                    <a onclick="{!c.changeTab}" class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="2" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">
+                        Favorite Games
+                    </a>
+                </li>
+                <li class="{! 'slds-tabs--scoped__item slds-text-heading--label ' + (v.activeTabNumber == '3'?'slds-active':'')}" title="Item One" role="presentation">
+                    <a onclick="{!c.changeTab}" class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="3" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">
+                        History
+                    </a>
                 </li>
             </ul>
             <div class="{! 'slds-tabs--scoped__content ' + (v.activeTabNumber == '1'? 'slds-show': 'slds-hide')}" role="tabpanel" aria-labelledby="tab-default-1__item">
-                <c:Gameize_Select debug="{!v.debug}" gameList="{!v.gameList}" />
+                <c:Gameize_Select debug="{!v.debug}" gameList="{!v.gameList}" dataFavorite="{!v.dataFavorite}" dataHistory="{!v.dataHistory}" maxHistoryItems="{!v.maxHistoryItems}" />
+            </div>
+            <div class="{! 'slds-tabs--scoped__content ' + (v.activeTabNumber == '2'? 'slds-show': 'slds-hide')}" role="tabpanel" aria-labelledby="tab-default-1__item">
+                <c:Gameize_Favorite debug="{!v.debug}" gameList="{!v.gameList}" dataFavorite="{!v.dataFavorite}" dataHistory="{!v.dataHistory}" />
+            </div>
+            <div class="{! 'slds-tabs--scoped__content ' + (v.activeTabNumber == '3'? 'slds-show': 'slds-hide')}" role="tabpanel" aria-labelledby="tab-default-1__item">
+                Game History
             </div>
         </div>
-
     </div>
 </aura:component>
