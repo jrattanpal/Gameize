@@ -1,0 +1,5 @@
+<design:component label="Gameize - Game Randomize">
+    <design:attribute name="debug" label="Debug?" default="false" description="If enabled, this will show debug data." />
+    <design:attribute name="maxHistoryItems" label="Max. History items?" default="10" description="Number of items to store in history." />
+    <design:attribute name="activeTabNumber" label="Default Tab?" default="1" description="Valid values: 1, 2 OR 3; decide which tab to show by default." />
+</design:component>

@@ -1,0 +1,722 @@
+37.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+17:37:32.0 (351672)|USER_INFO|[EXTERNAL]|00541000000Hq4o|gameize@jr.te|Eastern Standard Time|GMT-04:00
+17:37:32.0 (737463)|HEAP_ALLOCATE|[72]|Bytes:3
+17:37:32.0 (795204)|HEAP_ALLOCATE|[77]|Bytes:152
+17:37:32.0 (812300)|HEAP_ALLOCATE|[342]|Bytes:408
+17:37:32.0 (827848)|HEAP_ALLOCATE|[355]|Bytes:408
+17:37:32.0 (841013)|HEAP_ALLOCATE|[467]|Bytes:48
+17:37:32.1 (1969814)|USER_INFO|[EXTERNAL]|00541000000Hq4o|gameize@jr.te|Eastern Standard Time|GMT-04:00
+17:37:32.1 (2577695)|STATEMENT_EXECUTE|[1]
+17:37:32.1 (2587225)|METHOD_EXIT|[1]|ETLC_ApexBridge_Controller
+17:37:32.1 (2591580)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:86
+17:37:32.1 (2602120)|SYSTEM_MODE_ENTER|false
+17:37:32.1 (2613133)|VARIABLE_SCOPE_BEGIN|[3]|dataJson|String|false|false
+17:37:32.1 (2641316)|VARIABLE_ASSIGNMENT|[3]|dataJson|"{\"operation\":\"Gameiz (66 more) ..."
+17:37:32.1 (2651540)|STATEMENT_EXECUTE|[3]
+17:37:32.1 (2652948)|STATEMENT_EXECUTE|[4]
+17:37:32.1 (4470440)|VARIABLE_SCOPE_BEGIN|[4]|data|gameize.ETLC_ApexBridge_Data|true|false
+17:37:32.1 (4482246)|VARIABLE_ASSIGNMENT|[4]|data|null|
+17:37:32.1 (4484708)|STATEMENT_EXECUTE|[5]
+17:37:32.1 (4485936)|STATEMENT_EXECUTE|[5]
+17:37:32.1 (4486921)|STATEMENT_EXECUTE|[6]
+17:37:32.1 (4501916)|HEAP_ALLOCATE|[6]|Bytes:11
+17:37:32.1 (4508601)|HEAP_ALLOCATE|[6]|Bytes:248
+17:37:32.1 (4510928)|HEAP_ALLOCATE|[6]|Bytes:39
+17:37:32.1 (4553005)|METHOD_ENTRY|[2]|01p41000000CNQH|ETLC_ApexBridge_Data.ETLC_ApexBridge_Data()
+17:37:32.1 (4556739)|STATEMENT_EXECUTE|[2]
+17:37:32.1 (4561036)|STATEMENT_EXECUTE|[2]
+17:37:32.1 (4566350)|METHOD_EXIT|[2]|ETLC_ApexBridge_Data
+17:37:32.1 (4595189)|METHOD_ENTRY|[6]|01p41000000CNQH|gameize.ETLC_ApexBridge_Data.fromJSON(String)
+17:37:32.1 (4621619)|VARIABLE_SCOPE_BEGIN|[60]|strJson|String|false|false
+17:37:32.1 (4630439)|VARIABLE_ASSIGNMENT|[60]|strJson|"{\"operation\":\"Gameiz (66 more) ..."
+17:37:32.1 (4634302)|STATEMENT_EXECUTE|[60]
+17:37:32.1 (4635523)|STATEMENT_EXECUTE|[61]
+17:37:32.1 (4643063)|HEAP_ALLOCATE|[61]|Bytes:28
+17:37:32.1 (4664665)|HEAP_ALLOCATE|[50]|Bytes:5
+17:37:32.1 (4685537)|HEAP_ALLOCATE|[56]|Bytes:5
+17:37:32.1 (4692046)|HEAP_ALLOCATE|[64]|Bytes:7
+17:37:32.1 (4789598)|HEAP_ALLOCATE|[61]|Bytes:24
+17:37:32.1 (4803193)|SYSTEM_METHOD_ENTRY|[1]|Type.Type()
+17:37:32.1 (4806156)|STATEMENT_EXECUTE|[1]
+17:37:32.1 (4813608)|SYSTEM_METHOD_EXIT|[1]|Type
+17:37:32.1 (4818801)|HEAP_ALLOCATE|[61]|Bytes:8
+17:37:32.1 (4840689)|HEAP_ALLOCATE|[61]|Bytes:8
+17:37:32.1 (4844696)|VARIABLE_SCOPE_BEGIN|[4]|this|System.Type|true|false
+17:37:32.1 (4889667)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x210e5fbc
+17:37:32.1 (4893017)|VARIABLE_SCOPE_BEGIN|[4]|apextype|java:common.apex.runtime.ApexObjectType|true|false
+17:37:32.1 (4991956)|VARIABLE_ASSIGNMENT|[4]|apextype|"gameize.ETLC_ApexBridge_Data"|0x49b83981
+17:37:32.1 (5054492)|HEAP_ALLOCATE|[61]|Bytes:8
+17:37:32.1 (5093721)|HEAP_ALLOCATE|[61]|Bytes:24
+17:37:32.1 (5105150)|SYSTEM_METHOD_ENTRY|[1]|JSON.JSON()
+17:37:32.1 (5107896)|STATEMENT_EXECUTE|[1]
+17:37:32.1 (5113419)|SYSTEM_METHOD_EXIT|[1]|JSON
+17:37:32.1 (5126316)|METHOD_ENTRY|[61]||System.JSON.deserializeStrict(String, System.Type)
+17:37:32.1 (5739016)|METHOD_EXIT|[61]||System.JSON.deserializeStrict(String, System.Type)
+17:37:32.1 (5747110)|METHOD_EXIT|[6]|01p41000000CNQH|gameize.ETLC_ApexBridge_Data.fromJSON(String)
+17:37:32.1 (5801863)|VARIABLE_ASSIGNMENT|[6]|data|{"debug":false,"input":"{\"mode\":\"fetchGameDa (4 more) ...","operation":"GameizeController"}|0x343874e4
+17:37:32.1 (5806388)|STATEMENT_EXECUTE|[7]
+17:37:32.1 (5858974)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchGameDa (4 more) ...","operation":"GameizeController"}|0x343874e4
+17:37:32.1 (5874066)|METHOD_ENTRY|[7]||System.Type.forName(String)
+17:37:32.1 (7839898)|METHOD_EXIT|[7]||System.Type.forName(String)
+17:37:32.1 (7850538)|METHOD_ENTRY|[7]||System.Type.newInstance()
+17:37:32.1 (9158405)|STATEMENT_EXECUTE|[1]
+17:37:32.1 (9169557)|HEAP_ALLOCATE|[33]|Bytes:5
+17:37:32.1 (9184511)|METHOD_EXIT|[1]|GameizeController
+17:37:32.1 (9198765)|HEAP_ALLOCATE|[33]|Bytes:4
+17:37:32.1 (9205706)|VARIABLE_SCOPE_BEGIN|[1]|this|gameize.GameizeController|true|false
+17:37:32.1 (9222999)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x40b58e1c
+17:37:32.1 (9229183)|HEAP_ALLOCATE|[33]|Bytes:5
+17:37:32.1 (9235392)|HEAP_ALLOCATE|[33]|Bytes:11
+17:37:32.1 (9254489)|METHOD_ENTRY|[1]|01p41000000CNQC|ETLC_ApexBridge_Abstract.ETLC_ApexBridge_Abstract()
+17:37:32.1 (9257546)|STATEMENT_EXECUTE|[1]
+17:37:32.1 (9261409)|STATEMENT_EXECUTE|[1]
+17:37:32.1 (9265547)|METHOD_EXIT|[1]|ETLC_ApexBridge_Abstract
+17:37:32.1 (9271326)|CONSTRUCTOR_ENTRY|[EXTERNAL]|01p41000000CNQC|<init>()
+17:37:32.1 (9287452)|VARIABLE_SCOPE_BEGIN|[1]|this|gameize.ETLC_ApexBridge_Abstract|true|false
+17:37:32.1 (9299652)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x40b58e1c
+17:37:32.1 (9310949)|STATEMENT_EXECUTE|[1]
+17:37:32.1 (9314210)|CONSTRUCTOR_EXIT|[EXTERNAL]|01p41000000CNQC|<init>()
+17:37:32.1 (9318248)|STATEMENT_EXECUTE|[1]
+17:37:32.1 (9321969)|HEAP_ALLOCATE|[33]|Bytes:5
+17:37:32.1 (9334500)|METHOD_EXIT|[7]||System.Type.newInstance()
+17:37:32.1 (9340573)|VARIABLE_SCOPE_BEGIN|[7]|executor|gameize.ETLC_ApexBridge_Abstract|true|false
+17:37:32.1 (9349836)|VARIABLE_ASSIGNMENT|[7]|executor|{}|0x40b58e1c
+17:37:32.1 (9352367)|STATEMENT_EXECUTE|[8]
+17:37:32.1 (9390841)|METHOD_ENTRY|[8]|01p41000000CQtU|gameize.GameizeController.process(gameize.ETLC_ApexBridge_Data)
+17:37:32.1 (9415352)|VARIABLE_SCOPE_BEGIN|[3]|this|gameize.GameizeController|true|false
+17:37:32.1 (9425705)|VARIABLE_ASSIGNMENT|[3]|this|{}|0x40b58e1c
+17:37:32.1 (9428140)|VARIABLE_SCOPE_BEGIN|[3]|data|gameize.ETLC_ApexBridge_Data|true|false
+17:37:32.1 (9450234)|VARIABLE_ASSIGNMENT|[3]|data|{"debug":false,"input":"{\"mode\":\"fetchGameDa (4 more) ...","operation":"GameizeController"}|0x343874e4
+17:37:32.1 (9457650)|HEAP_ALLOCATE|[4]|Bytes:5
+17:37:32.1 (9461174)|STATEMENT_EXECUTE|[3]
+17:37:32.1 (9462250)|STATEMENT_EXECUTE|[4]
+17:37:32.1 (9505134)|VARIABLE_ASSIGNMENT|[4]|GameizeController.apexBridgedata|{"debug":false,"input":"{\"mode\":\"fetchGameDa (4 more) ...","operation":"GameizeController"}|0x343874e4
+17:37:32.1 (9569254)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchGameDa (4 more) ...","operation":"GameizeController"}|0x343874e4
+17:37:32.1 (9582277)|STATEMENT_EXECUTE|[5]
+17:37:32.1 (9587670)|STATEMENT_EXECUTE|[7]
+17:37:32.1 (9591995)|HEAP_ALLOCATE|[7]|Bytes:4
+17:37:32.1 (9610403)|METHOD_ENTRY|[7]|01p41000000CNQH|gameize.ETLC_ApexBridge_Data.getInputValue(String)
+17:37:32.1 (9629720)|VARIABLE_SCOPE_BEGIN|[52]|this|gameize.ETLC_ApexBridge_Data|true|false
+17:37:32.1 (9649244)|VARIABLE_ASSIGNMENT|[52]|this|{"debug":false,"input":"{\"mode\":\"fetchGameDa (4 more) ...","operation":"GameizeController"}|0x343874e4
+17:37:32.1 (9652919)|VARIABLE_SCOPE_BEGIN|[52]|key|String|false|false
+17:37:32.1 (9656364)|VARIABLE_ASSIGNMENT|[52]|key|"mode"
+17:37:32.1 (9659872)|STATEMENT_EXECUTE|[52]
+17:37:32.1 (9661135)|STATEMENT_EXECUTE|[53]
+17:37:32.1 (9697312)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchGameDa (4 more) ...","operation":"GameizeController"}|0x343874e4
+17:37:32.1 (9709612)|METHOD_ENTRY|[53]||System.JSON.deserializeUntyped(String)
+17:37:32.1 (9959087)|METHOD_EXIT|[53]||System.JSON.deserializeUntyped(String)
+17:37:32.1 (9966409)|VARIABLE_SCOPE_BEGIN|[53]|inputMap|Map<String,ANY>|true|false
+17:37:32.1 (9990214)|VARIABLE_ASSIGNMENT|[53]|inputMap|{"s":1,"v":{"mode":"fetchGameData"}}|0x4a9514a4
+17:37:32.1 (9993355)|STATEMENT_EXECUTE|[54]
+17:37:32.1 (10017541)|ENTERING_MANAGED_PKG|
+17:37:32.1 (10046342)|METHOD_EXIT|[7]|01p41000000CNQH|gameize.ETLC_ApexBridge_Data.getInputValue(String)
+17:37:32.1 (10051854)|VARIABLE_SCOPE_BEGIN|[7]|mode|String|false|false
+17:37:32.1 (10057593)|VARIABLE_ASSIGNMENT|[7]|mode|"fetchGameData"
+17:37:32.1 (10060984)|HEAP_ALLOCATE|[8]|Bytes:13
+17:37:32.1 (10086004)|HEAP_ALLOCATE|[11]|Bytes:12
+17:37:32.1 (10092171)|HEAP_ALLOCATE|[13]|Bytes:13
+17:37:32.1 (10103839)|STATEMENT_EXECUTE|[13]
+17:37:32.1 (10105286)|STATEMENT_EXECUTE|[14]
+17:37:32.1 (10117458)|METHOD_ENTRY|[14]|01p41000000CQtU|gameize.GameizeController.fetchGameData()
+17:37:32.1 (10134819)|VARIABLE_SCOPE_BEGIN|[82]|this|gameize.GameizeController|true|false
+17:37:32.1 (10148296)|VARIABLE_ASSIGNMENT|[82]|this|{}|0x40b58e1c
+17:37:32.1 (10154757)|HEAP_ALLOCATE|[83]|Bytes:5
+17:37:32.1 (10157828)|STATEMENT_EXECUTE|[82]
+17:37:32.1 (10159105)|STATEMENT_EXECUTE|[83]
+17:37:32.1 (10165103)|VARIABLE_SCOPE_BEGIN|[83]|returnData|String|false|false
+17:37:32.1 (10169642)|VARIABLE_ASSIGNMENT|[83]|returnData|null
+17:37:32.1 (10171108)|STATEMENT_EXECUTE|[84]
+17:37:32.1 (10172120)|STATEMENT_EXECUTE|[84]
+17:37:32.1 (10173042)|STATEMENT_EXECUTE|[85]
+17:37:32.1 (10176095)|HEAP_ALLOCATE|[85]|Bytes:63
+17:37:32.1 (10181654)|HEAP_ALLOCATE|[85]|Bytes:4
+17:37:32.1 (10426591)|SOQL_EXECUTE_BEGIN|[85]|Aggregations:0|SELECT Body FROM StaticResource WHERE Name = 'Gameize_GameList'
+17:37:32.1 (13550858)|SOQL_EXECUTE_END|[85]|Rows:1
+17:37:32.1 (13576491)|HEAP_ALLOCATE|[85]|Bytes:8
+17:37:32.1 (13590939)|HEAP_ALLOCATE|[85]|Bytes:536
+17:37:32.1 (13659395)|HEAP_ALLOCATE|[85]|Bytes:8
+17:37:32.1 (13670107)|VARIABLE_SCOPE_BEGIN|[85]|records|List<StaticResource>|true|false
+17:37:32.1 (13702114)|VARIABLE_ASSIGNMENT|[85]|records|{"s":1,"v":[{"s":2,"v":{"Body":BLOB(491 bytes),"Id":"081410000000JmSAAU"}}]}|0x73915447
+17:37:32.1 (13767408)|ENTERING_MANAGED_PKG|
+17:37:32.1 (13793195)|STATEMENT_EXECUTE|[86]
+17:37:32.1 (13795155)|STATEMENT_EXECUTE|[88]
+17:37:32.1 (13827040)|HEAP_ALLOCATE|[88]|Bytes:12
+17:37:32.1 (13873184)|ENTERING_MANAGED_PKG|
+17:37:32.1 (13931890)|HEAP_ALLOCATE|[88]|Bytes:491
+17:37:32.1 (13949822)|VARIABLE_ASSIGNMENT|[88]|returnData|"[{\"id\": 1, \"name\": \" (471 more) ..."
+17:37:32.1 (13952763)|STATEMENT_EXECUTE|[89]
+17:37:32.1 (13959679)|HEAP_ALLOCATE|[89]|Bytes:12
+17:37:32.1 (13969759)|HEAP_ALLOCATE|[89]|Bytes:503
+17:37:32.1 (13990635)|ENTERING_MANAGED_PKG|
+17:37:32.1 (14017537)|USER_DEBUG|[89]|DEBUG|returnData::[{"id": 1, "name": "Age Counter", "auraid": "agecounter", "cmpname": "AgeCounter", "desc": "Count how long you've lived, in days+hours+minutes."},{"id": 2, "name": "Hangman", "auraid": "hangman", "cmpname": "Hangman", "desc": "Games are a good way to keep your visitors- and yourself- occupied on your site. Here's where this script comes in. It's the great JavaScript reincarnation of the classic Hang Man game. Play against the computer. The vocabulary to be used is configurable. Cool!"}]
+17:37:32.1 (14071690)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchGameDa (4 more) ...","operation":"GameizeController"}|0x343874e4
+17:37:32.1 (14081325)|STATEMENT_EXECUTE|[90]
+17:37:32.1 (14087150)|STATEMENT_EXECUTE|[93]
+17:37:32.1 (14094423)|METHOD_EXIT|[14]|01p41000000CQtU|gameize.GameizeController.fetchGameData()
+17:37:32.1 (14133191)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchGameDa (4 more) ...","operation":"GameizeController"}|0x343874e4
+17:37:32.1 (14141339)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"[{\"id\": 1, \"name\": \" (471 more) ..."
+17:37:32.1 (14150746)|VARIABLE_ASSIGNMENT|[12]|this.output|"[{\"id\": 1, \"name\": \" (471 more) ..."|0x343874e4
+17:37:32.1 (14155518)|STATEMENT_EXECUTE|[15]
+17:37:32.1 (14196217)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchGameDa (4 more) ...","operation":"GameizeController","output":"[{\"id\": 1, \"name\": \" (471 more) ..."}|0x343874e4
+17:37:32.1 (14230120)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchGameDa (4 more) ...","operation":"GameizeController","output":"[{\"id\": 1, \"name\": \" (471 more) ..."}|0x343874e4
+17:37:32.1 (14237644)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|true
+17:37:32.1 (14241293)|HEAP_ALLOCATE|[15]|Bytes:5
+17:37:32.1 (14247065)|VARIABLE_ASSIGNMENT|[15]|this.outputFlag|true|0x343874e4
+17:37:32.1 (14255570)|METHOD_EXIT|[8]|01p41000000CQtU|gameize.GameizeController.process(gameize.ETLC_ApexBridge_Data)
+17:37:32.1 (14258450)|STATEMENT_EXECUTE|[23]
+17:37:32.1 (14270392)|METHOD_ENTRY|[23]|01p41000000CNQH|gameize.ETLC_ApexBridge_Data.toJSON()
+17:37:32.1 (14286165)|VARIABLE_SCOPE_BEGIN|[57]|this|gameize.ETLC_ApexBridge_Data|true|false
+17:37:32.1 (14306453)|VARIABLE_ASSIGNMENT|[57]|this|{"debug":false,"input":"{\"mode\":\"fetchGameDa (4 more) ...","operation":"GameizeController","output":"[{\"id\": 1, \"name\": \" (471 more) ...","outputFlag":true}|0x343874e4
+17:37:32.1 (14311052)|STATEMENT_EXECUTE|[57]
+17:37:32.1 (14312099)|STATEMENT_EXECUTE|[58]
+17:37:32.1 (14321136)|METHOD_ENTRY|[58]||System.JSON.serialize(Object)
+17:37:32.1 (14428210)|STATEMENT_EXECUTE|[22]
+17:37:32.1 (14432050)|STATEMENT_EXECUTE|[23]
+17:37:32.1 (14439568)|HEAP_ALLOCATE|[23]|Bytes:5
+17:37:32.1 (14447289)|VARIABLE_ASSIGNMENT|[23]|this.isSuccess|true|0x343874e4
+17:37:32.1 (14449446)|STATEMENT_EXECUTE|[24]
+17:37:32.1 (14488451)|STATEMENT_EXECUTE|[31]
+17:37:32.1 (14491405)|STATEMENT_EXECUTE|[32]
+17:37:32.1 (14497683)|HEAP_ALLOCATE|[32]|Bytes:4
+17:37:32.1 (14539495)|VARIABLE_ASSIGNMENT|[32]|this.messages|{"s":1,"v":{}}|0x343874e4
+17:37:32.1 (14542257)|STATEMENT_EXECUTE|[33]
+17:37:32.1 (14873306)|METHOD_EXIT|[58]||System.JSON.serialize(Object)
+17:37:32.1 (14878587)|METHOD_EXIT|[23]|01p41000000CNQH|gameize.ETLC_ApexBridge_Data.toJSON()
+17:37:32.1 (14887962)|SYSTEM_MODE_EXIT|false
+17:37:32.14 (14927320)|CUMULATIVE_LIMIT_USAGE
+17:37:32.14 (14927320)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:37:32.14 (14927320)|LIMIT_USAGE_FOR_NS|gameize|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:37:32.14 (14927320)|CUMULATIVE_LIMIT_USAGE_END
+
+17:37:32.1 (14997931)|CODE_UNIT_FINISHED|ETLC_ApexBridge_Controller.execute
+17:37:32.0 (15212244)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:86
+17:37:32.0 (15225909)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:86
+17:37:32.16 (16839056)|USER_INFO|[EXTERNAL]|00541000000Hq4o|gameize@jr.te|Eastern Standard Time|GMT-04:00
+17:37:32.16 (16904105)|STATEMENT_EXECUTE|[3]
+17:37:32.16 (16906379)|STATEMENT_EXECUTE|[4]
+17:37:32.16 (16915151)|VARIABLE_SCOPE_BEGIN|[4]|data|gameize.ETLC_ApexBridge_Data|true|false
+17:37:32.16 (16931953)|VARIABLE_ASSIGNMENT|[4]|data|null|
+17:37:32.16 (16934028)|STATEMENT_EXECUTE|[5]
+17:37:32.16 (16935128)|STATEMENT_EXECUTE|[5]
+17:37:32.16 (16936072)|STATEMENT_EXECUTE|[6]
+17:37:32.16 (16943970)|METHOD_ENTRY|[6]|01p41000000CNQH|gameize.ETLC_ApexBridge_Data.fromJSON(String)
+17:37:32.16 (16947775)|VARIABLE_SCOPE_BEGIN|[60]|strJson|String|false|false
+17:37:32.16 (16955012)|VARIABLE_ASSIGNMENT|[60]|strJson|"{\"operation\":\"Gameiz (66 more) ..."
+17:37:32.16 (16957652)|STATEMENT_EXECUTE|[60]
+17:37:32.16 (16958855)|STATEMENT_EXECUTE|[61]
+17:37:32.16 (16998370)|HEAP_ALLOCATE|[61]|Bytes:8
+17:37:32.16 (17004074)|HEAP_ALLOCATE|[61]|Bytes:8
+17:37:32.16 (17007392)|VARIABLE_SCOPE_BEGIN|[4]|this|System.Type|true|false
+17:37:32.16 (17023652)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x222ccff2
+17:37:32.16 (17025975)|VARIABLE_SCOPE_BEGIN|[4]|apextype|java:common.apex.runtime.ApexObjectType|true|false
+17:37:32.16 (17096268)|VARIABLE_ASSIGNMENT|[4]|apextype|"gameize.ETLC_ApexBridge_Data"|0x49b83981
+17:37:32.16 (17123493)|HEAP_ALLOCATE|[61]|Bytes:8
+17:37:32.16 (17132099)|METHOD_ENTRY|[61]||System.JSON.deserializeStrict(String, System.Type)
+17:37:32.16 (17272881)|METHOD_EXIT|[61]||System.JSON.deserializeStrict(String, System.Type)
+17:37:32.16 (17278938)|METHOD_EXIT|[6]|01p41000000CNQH|gameize.ETLC_ApexBridge_Data.fromJSON(String)
+17:37:32.16 (17305930)|VARIABLE_ASSIGNMENT|[6]|data|{"debug":false,"input":"{\"mode\":\"fetchUserDa (4 more) ...","operation":"GameizeController"}|0x75ca130f
+17:37:32.16 (17309721)|STATEMENT_EXECUTE|[7]
+17:37:32.16 (17336319)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchUserDa (4 more) ...","operation":"GameizeController"}|0x75ca130f
+17:37:32.16 (17344692)|METHOD_ENTRY|[7]||System.Type.forName(String)
+17:37:32.16 (17443381)|METHOD_EXIT|[7]||System.Type.forName(String)
+17:37:32.16 (17448626)|METHOD_ENTRY|[7]||System.Type.newInstance()
+17:37:32.16 (17497775)|HEAP_ALLOCATE|[33]|Bytes:5
+17:37:32.16 (17504234)|CONSTRUCTOR_ENTRY|[EXTERNAL]|01p41000000CNQC|<init>()
+17:37:32.16 (17507491)|VARIABLE_SCOPE_BEGIN|[1]|this|gameize.ETLC_ApexBridge_Abstract|true|false
+17:37:32.16 (17519667)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x3cce90a9
+17:37:32.16 (17528473)|STATEMENT_EXECUTE|[1]
+17:37:32.16 (17531377)|CONSTRUCTOR_EXIT|[EXTERNAL]|01p41000000CNQC|<init>()
+17:37:32.16 (17535170)|STATEMENT_EXECUTE|[1]
+17:37:32.16 (17538114)|HEAP_ALLOCATE|[33]|Bytes:5
+17:37:32.16 (17548900)|METHOD_EXIT|[7]||System.Type.newInstance()
+17:37:32.16 (17554293)|VARIABLE_SCOPE_BEGIN|[7]|executor|gameize.ETLC_ApexBridge_Abstract|true|false
+17:37:32.16 (17562404)|VARIABLE_ASSIGNMENT|[7]|executor|{}|0x3cce90a9
+17:37:32.16 (17564095)|STATEMENT_EXECUTE|[8]
+17:37:32.16 (17573754)|METHOD_ENTRY|[8]|01p41000000CQtU|gameize.GameizeController.process(gameize.ETLC_ApexBridge_Data)
+17:37:32.16 (17576597)|VARIABLE_SCOPE_BEGIN|[3]|this|gameize.GameizeController|true|false
+17:37:32.16 (17582946)|VARIABLE_ASSIGNMENT|[3]|this|{}|0x3cce90a9
+17:37:32.16 (17584354)|VARIABLE_SCOPE_BEGIN|[3]|data|gameize.ETLC_ApexBridge_Data|true|false
+17:37:32.16 (17602671)|VARIABLE_ASSIGNMENT|[3]|data|{"debug":false,"input":"{\"mode\":\"fetchUserDa (4 more) ...","operation":"GameizeController"}|0x75ca130f
+17:37:32.16 (17607995)|HEAP_ALLOCATE|[4]|Bytes:5
+17:37:32.16 (17611121)|STATEMENT_EXECUTE|[3]
+17:37:32.16 (17612260)|STATEMENT_EXECUTE|[4]
+17:37:32.16 (17636462)|VARIABLE_ASSIGNMENT|[4]|GameizeController.apexBridgedata|{"debug":false,"input":"{\"mode\":\"fetchUserDa (4 more) ...","operation":"GameizeController"}|0x75ca130f
+17:37:32.16 (17654587)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchUserDa (4 more) ...","operation":"GameizeController"}|0x75ca130f
+17:37:32.16 (17661257)|STATEMENT_EXECUTE|[5]
+17:37:32.16 (17664707)|STATEMENT_EXECUTE|[7]
+17:37:32.16 (17669727)|METHOD_ENTRY|[7]|01p41000000CNQH|gameize.ETLC_ApexBridge_Data.getInputValue(String)
+17:37:32.16 (17672281)|VARIABLE_SCOPE_BEGIN|[52]|this|gameize.ETLC_ApexBridge_Data|true|false
+17:37:32.16 (17687133)|VARIABLE_ASSIGNMENT|[52]|this|{"debug":false,"input":"{\"mode\":\"fetchUserDa (4 more) ...","operation":"GameizeController"}|0x75ca130f
+17:37:32.16 (17689641)|VARIABLE_SCOPE_BEGIN|[52]|key|String|false|false
+17:37:32.16 (17692462)|VARIABLE_ASSIGNMENT|[52]|key|"mode"
+17:37:32.16 (17694763)|STATEMENT_EXECUTE|[52]
+17:37:32.16 (17696413)|STATEMENT_EXECUTE|[53]
+17:37:32.16 (17714409)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchUserDa (4 more) ...","operation":"GameizeController"}|0x75ca130f
+17:37:32.16 (17721380)|METHOD_ENTRY|[53]||System.JSON.deserializeUntyped(String)
+17:37:32.16 (17863928)|METHOD_EXIT|[53]||System.JSON.deserializeUntyped(String)
+17:37:32.16 (17870756)|VARIABLE_SCOPE_BEGIN|[53]|inputMap|Map<String,ANY>|true|false
+17:37:32.16 (17888490)|VARIABLE_ASSIGNMENT|[53]|inputMap|{"s":1,"v":{"mode":"fetchUserData"}}|0x19638901
+17:37:32.16 (17891651)|STATEMENT_EXECUTE|[54]
+17:37:32.16 (17909889)|ENTERING_MANAGED_PKG|
+17:37:32.16 (17919116)|METHOD_EXIT|[7]|01p41000000CNQH|gameize.ETLC_ApexBridge_Data.getInputValue(String)
+17:37:32.16 (17923646)|VARIABLE_SCOPE_BEGIN|[7]|mode|String|false|false
+17:37:32.16 (17928170)|VARIABLE_ASSIGNMENT|[7]|mode|"fetchUserData"
+17:37:32.16 (17941470)|STATEMENT_EXECUTE|[8]
+17:37:32.16 (17942708)|STATEMENT_EXECUTE|[9]
+17:37:32.16 (17984408)|HEAP_ALLOCATE|[9]|Bytes:85
+17:37:32.16 (17999693)|SYSTEM_METHOD_ENTRY|[1]|UserInfo.UserInfo()
+17:37:32.16 (18002772)|STATEMENT_EXECUTE|[1]
+17:37:32.16 (18010991)|SYSTEM_METHOD_EXIT|[1]|UserInfo
+17:37:32.16 (18023309)|METHOD_ENTRY|[9]||System.UserInfo.getUserId()
+17:37:32.16 (18057734)|METHOD_EXIT|[9]||System.UserInfo.getUserId()
+17:37:32.16 (18068136)|HEAP_ALLOCATE|[9]|Bytes:4
+17:37:32.16 (18081862)|METHOD_ENTRY|[9]|01p41000000CQtU|gameize.GameizeController.fetchUserData(Id)
+17:37:32.16 (18088581)|VARIABLE_SCOPE_BEGIN|[21]|this|gameize.GameizeController|true|false
+17:37:32.16 (18101706)|VARIABLE_ASSIGNMENT|[21]|this|{}|0x3cce90a9
+17:37:32.16 (18104926)|VARIABLE_SCOPE_BEGIN|[21]|userId|Id|false|false
+17:37:32.16 (18156766)|VARIABLE_ASSIGNMENT|[21]|userId|"00541000000Hq4oAAC"
+17:37:32.16 (18165297)|HEAP_ALLOCATE|[22]|Bytes:5
+17:37:32.16 (18169354)|STATEMENT_EXECUTE|[21]
+17:37:32.16 (18170481)|STATEMENT_EXECUTE|[22]
+17:37:32.16 (18179372)|VARIABLE_SCOPE_BEGIN|[22]|returnData|String|false|false
+17:37:32.16 (18184161)|VARIABLE_ASSIGNMENT|[22]|returnData|null
+17:37:32.16 (18185632)|STATEMENT_EXECUTE|[23]
+17:37:32.16 (18186616)|STATEMENT_EXECUTE|[23]
+17:37:32.16 (18187562)|STATEMENT_EXECUTE|[24]
+17:37:32.16 (18191389)|HEAP_ALLOCATE|[24]|Bytes:109
+17:37:32.16 (18196188)|HEAP_ALLOCATE|[24]|Bytes:4
+17:37:32.16 (18201305)|HEAP_ALLOCATE|[24]|Bytes:7
+17:37:32.16 (19166103)|SOQL_EXECUTE_BEGIN|[24]|Aggregations:0|SELECT ID, gameize__dataFavorite__c, gameize__dataHistory__c FROM Gameize__c WHERE User__c = :tmpVar1 LIMIT 1
+17:37:32.16 (24341569)|SOQL_EXECUTE_END|[24]|Rows:1
+17:37:32.16 (24367955)|HEAP_ALLOCATE|[24]|Bytes:8
+17:37:32.16 (24377407)|HEAP_ALLOCATE|[24]|Bytes:1347
+17:37:32.16 (24435089)|HEAP_ALLOCATE|[24]|Bytes:8
+17:37:32.16 (24445872)|VARIABLE_SCOPE_BEGIN|[24]|records|List<gameize__Gameize__c>|true|false
+17:37:32.16 (24474098)|VARIABLE_ASSIGNMENT|[24]|records|{"s":1,"v":[{"s":2,"v":{"Id":"a0041000000j7nTAAQ","gameize__dataFavorit (4 more) ...":"[{\"name\":\"Hangman\",\" (27 more) ...","gameize__dataHistory (3 more) ...":"[{\"name\":\"Hangman\",\" (1192 more) ..."}}]}|0x754bccd4
+17:37:32.16 (24525799)|ENTERING_MANAGED_PKG|
+17:37:32.16 (24550451)|STATEMENT_EXECUTE|[25]
+17:37:32.16 (24552124)|STATEMENT_EXECUTE|[27]
+17:37:32.16 (26898525)|HEAP_ALLOCATE|[27]|Bytes:9
+17:37:32.16 (26906202)|HEAP_ALLOCATE|[27]|Bytes:29
+17:37:32.16 (26908798)|HEAP_ALLOCATE|[27]|Bytes:21
+17:37:32.16 (26931306)|METHOD_ENTRY|[7]|01p41000000CNQM|ETLC_SecuredDB.ETLC_SecuredDB()
+17:37:32.16 (26935039)|STATEMENT_EXECUTE|[7]
+17:37:32.16 (26939560)|STATEMENT_EXECUTE|[7]
+17:37:32.16 (26944757)|HEAP_ALLOCATE|[27]|Bytes:5
+17:37:32.16 (26953726)|METHOD_EXIT|[7]|ETLC_SecuredDB
+17:37:32.16 (26980648)|METHOD_ENTRY|[27]|01p41000000CNQM|gameize.ETLC_SecuredDB.validateQuery(List<SObject>)
+17:37:32.16 (27007429)|VARIABLE_SCOPE_BEGIN|[28]|dbRecords|List<SObject>|true|false
+17:37:32.16 (27032772)|VARIABLE_ASSIGNMENT|[28]|dbRecords|{"s":1,"v":[{"s":2,"v":{"Id":"a0041000000j7nTAAQ","gameize__dataFavorit (4 more) ...":"[{\"name\":\"Hangman\",\" (27 more) ...","gameize__dataHistory (3 more) ...":"[{\"name\":\"Hangman\",\" (1192 more) ..."}}]}|0x754bccd4
+17:37:32.16 (27041115)|HEAP_ALLOCATE|[29]|Bytes:5
+17:37:32.16 (27045051)|STATEMENT_EXECUTE|[28]
+17:37:32.16 (27046406)|STATEMENT_EXECUTE|[29]
+17:37:32.16 (27253360)|HEAP_ALLOCATE|[29]|Bytes:12
+17:37:32.16 (27259181)|HEAP_ALLOCATE|[29]|Bytes:8
+17:37:32.16 (27308110)|HEAP_ALLOCATE|[29]|Bytes:12
+17:37:32.16 (27311104)|HEAP_ALLOCATE|[29]|Bytes:9
+17:37:32.16 (27319664)|HEAP_ALLOCATE|[29]|Bytes:12
+17:37:32.16 (27321559)|HEAP_ALLOCATE|[29]|Bytes:8
+17:37:32.16 (27328049)|HEAP_ALLOCATE|[29]|Bytes:12
+17:37:32.16 (27329790)|HEAP_ALLOCATE|[29]|Bytes:8
+17:37:32.16 (27337977)|HEAP_ALLOCATE|[29]|Bytes:12
+17:37:32.16 (27339795)|HEAP_ALLOCATE|[29]|Bytes:9
+17:37:32.16 (27368109)|METHOD_ENTRY|[29]|01p41000000CNQM|gameize.ETLC_SecuredDB.findFields(List<SObject>)
+17:37:32.16 (27427276)|VARIABLE_SCOPE_BEGIN|[108]|dbRecords|List<SObject>|true|false
+17:37:32.16 (27450840)|VARIABLE_ASSIGNMENT|[108]|dbRecords|{"s":1,"v":[{"s":2,"v":{"Id":"a0041000000j7nTAAQ","gameize__dataFavorit (4 more) ...":"[{\"name\":\"Hangman\",\" (27 more) ...","gameize__dataHistory (3 more) ...":"[{\"name\":\"Hangman\",\" (1192 more) ..."}}]}|0x754bccd4
+17:37:32.16 (27459169)|HEAP_ALLOCATE|[109]|Bytes:5
+17:37:32.16 (27463078)|STATEMENT_EXECUTE|[108]
+17:37:32.16 (27464404)|STATEMENT_EXECUTE|[109]
+17:37:32.16 (27473458)|VARIABLE_SCOPE_BEGIN|[109]|strJSON|String|false|false
+17:37:32.16 (27477985)|VARIABLE_ASSIGNMENT|[109]|strJSON|null
+17:37:32.16 (27479566)|STATEMENT_EXECUTE|[110]
+17:37:32.16 (27483192)|VARIABLE_SCOPE_BEGIN|[110]|mapFields|Map<String,Set<String>>|true|false
+17:37:32.16 (27486549)|VARIABLE_ASSIGNMENT|[110]|mapFields|null|
+17:37:32.16 (27487817)|STATEMENT_EXECUTE|[112]
+17:37:32.16 (27495372)|METHOD_ENTRY|[112]||System.JSON.serialize(Object)
+17:37:32.16 (27856621)|METHOD_EXIT|[112]||System.JSON.serialize(Object)
+17:37:32.16 (27869565)|VARIABLE_ASSIGNMENT|[112]|strJSON|"[{\"attributes\":{\"typ (1598 more) ..."
+17:37:32.16 (27872690)|STATEMENT_EXECUTE|[113]
+17:37:32.16 (27880179)|HEAP_ALLOCATE|[113]|Bytes:5
+17:37:32.16 (27888431)|HEAP_ALLOCATE|[113]|Bytes:1623
+17:37:32.16 (27905169)|ENTERING_MANAGED_PKG|
+17:37:32.16 (27926601)|USER_DEBUG|[113]|DEBUG|JSON:[{"attributes":{"type":"gameize__Gameize__c","url":"/services/data/v37.0/sobjects/gameize__Gameize__c/a0041000000j7nTAAQ"},"Id":"a0041000000j7nTAAQ","gameize__dataFavorite__c":"[{\"name\":\"Hangman\",\"cmpname\":\"Hangman\",\"id\":2}]","gameize__dataHistory__c":"[{\"name\":\"Hangman\",\"cmpname\":\"Hangman\",\"datePlayed\":\"Mon Aug 08 2016 15:45:16 GMT-0400 (Eastern Daylight Time)\",\"id\":2},{\"name\":\"Hangman\",\"cmpname\":\"Hangman\",\"datePlayed\":\"Mon Aug 08 2016 15:45:23 GMT-0400 (Eastern Daylight Time)\",\"id\":2},{\"name\":\"Age Counter\",\"cmpname\":\"AgeCounter\",\"datePlayed\":\"Mon Aug 08 2016 15:45:26 GMT-0400 (Eastern Daylight Time)\",\"id\":1},{\"name\":\"Hangman\",\"cmpname\":\"Hangman\",\"datePlayed\":\"Mon Aug 08 2016 15:45:31 GMT-0400 (Eastern Daylight Time)\",\"id\":2},{\"name\":\"Age Counter\",\"cmpname\":\"AgeCounter\",\"datePlayed\":\"Mon Aug 08 2016 15:48:19 GMT-0400 (Eastern Daylight Time)\",\"id\":1},{\"name\":\"Hangman\",\"cmpname\":\"Hangman\",\"datePlayed\":\"Mon Aug 08 2016 15:48:22 GMT-0400 (Eastern Daylight Time)\",\"id\":2},{\"name\":\"Hangman\",\"cmpname\":\"Hangman\",\"datePlayed\":\"Mon Aug 08 2016 15:48:28 GMT-0400 (Eastern Daylight Time)\",\"id\":2},{\"name\":\"Hangman\",\"cmpname\":\"Hangman\",\"datePlayed\":\"Mon Aug 08 2016 15:48:31 GMT-0400 (Eastern Daylight Time)\",\"id\":2},{\"name\":\"Age Counter\",\"cmpname\":\"AgeCounter\",\"datePlayed\":\"Mon Aug 08 2016 15:48:34 GMT-0400 (Eastern Daylight Time)\",\"id\":1},{\"name\":\"Hangman\",\"cmpname\":\"Hangman\",\"datePlayed\":\"Mon Aug 08 2016 15:48:42 GMT-0400 (Eastern Daylight Time)\",\"id\":2}]"}]
+17:37:32.16 (27940854)|STATEMENT_EXECUTE|[114]
+17:37:32.16 (27948703)|HEAP_ALLOCATE|[114]|Bytes:4
+17:37:32.16 (27970006)|VARIABLE_ASSIGNMENT|[114]|mapFields|{"s":1,"v":{}}|0x45dd4709
+17:37:32.16 (27972400)|STATEMENT_EXECUTE|[115]
+17:37:32.16 (27981403)|METHOD_ENTRY|[115]||System.JSON.deserializeUntyped(String)
+17:37:32.16 (28345080)|METHOD_EXIT|[115]||System.JSON.deserializeUntyped(String)
+17:37:32.16 (28358273)|VARIABLE_SCOPE_BEGIN|[115]|records|List<ANY>|true|false
+17:37:32.16 (28383888)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+17:37:32.16 (28413202)|VARIABLE_ASSIGNMENT|[115]|records|{"s":1,"v":[{"s":2,"v":{"attributes":{"s":3,"v":{"type":"gameize__Gameize__c","url":"/services/data/v37.0 (48 more) ..."}},"Id":"a0041000000j7nTAAQ","gameize__dataFavorit (4 more) ...":"[{\"name\":\"Hangman\",\" (27 more) ...","gameize__dataHistory (3 more) ...":"[{\"name\":\"Hangman\",\" (1192 more) ..."}}]}|0x7aaaee16
+17:37:32.16 (28434724)|ENTERING_MANAGED_PKG|
+17:37:32.16 (28465448)|HEAP_ALLOCATE|[116]|Bytes:5
+17:37:32.16 (28478250)|HEAP_ALLOCATE|[116]|Bytes:20
+17:37:32.16 (28486034)|VARIABLE_SCOPE_BEGIN|[116]|record|Object|false|false
+17:37:32.16 (28509221)|VARIABLE_ASSIGNMENT|[116]|record|{"s":1,"v":{"attributes":{"s":2,"v":{"type":"gameize__Gameize__c","url":"/services/data/v37.0 (48 more) ..."}},"Id":"a0041000000j7nTAAQ","gameize__dataFavorit (4 more) ...":"[{\"name\":\"Hangman\",\" (27 more) ...","gameize__dataHistory (3 more) ...":"[{\"name\":\"Hangman\",\" (1192 more) ..."}}
+17:37:32.16 (28514114)|STATEMENT_EXECUTE|[116]
+17:37:32.16 (28515427)|STATEMENT_EXECUTE|[117]
+17:37:32.16 (28535874)|METHOD_ENTRY|[117]|01p41000000CNQM|gameize.ETLC_SecuredDB.findFieldsRecursive(Map<String,Set<String>>, Map<String,ANY>)
+17:37:32.16 (28557519)|VARIABLE_SCOPE_BEGIN|[124]|mapFields|Map<String,Set<String>>|true|false
+17:37:32.16 (28567616)|VARIABLE_ASSIGNMENT|[124]|mapFields|{"s":1,"v":{}}|0x45dd4709
+17:37:32.16 (28570645)|VARIABLE_SCOPE_BEGIN|[124]|record|Map<String,ANY>|true|false
+17:37:32.16 (28584460)|VARIABLE_ASSIGNMENT|[124]|record|{"s":1,"v":{"attributes":{"s":2,"v":{"type":"gameize__Gameize__c","url":"/services/data/v37.0 (48 more) ..."}},"Id":"a0041000000j7nTAAQ","gameize__dataFavorit (4 more) ...":"[{\"name\":\"Hangman\",\" (27 more) ...","gameize__dataHistory (3 more) ...":"[{\"name\":\"Hangman\",\" (1192 more) ..."}}|0x7ac42d00
+17:37:32.16 (28592364)|HEAP_ALLOCATE|[125]|Bytes:5
+17:37:32.16 (28596210)|STATEMENT_EXECUTE|[124]
+17:37:32.16 (28597444)|STATEMENT_EXECUTE|[125]
+17:37:32.16 (28602960)|HEAP_ALLOCATE|[125]|Bytes:10
+17:37:32.16 (28606871)|VARIABLE_SCOPE_BEGIN|[125]|strAttributes|String|false|false
+17:37:32.16 (28611690)|VARIABLE_ASSIGNMENT|[125]|strAttributes|"attributes"
+17:37:32.16 (28613231)|STATEMENT_EXECUTE|[126]
+17:37:32.16 (28616243)|HEAP_ALLOCATE|[126]|Bytes:7
+17:37:32.16 (28618548)|VARIABLE_SCOPE_BEGIN|[126]|strRecord|String|false|false
+17:37:32.16 (28621776)|VARIABLE_ASSIGNMENT|[126]|strRecord|"records"
+17:37:32.16 (28635995)|ENTERING_MANAGED_PKG|
+17:37:32.16 (28663501)|STATEMENT_EXECUTE|[127]
+17:37:32.16 (28665047)|STATEMENT_EXECUTE|[128]
+17:37:32.16 (28676338)|ENTERING_MANAGED_PKG|
+17:37:32.16 (28698369)|VARIABLE_SCOPE_BEGIN|[128]|attributes|Map<String,ANY>|true|false
+17:37:32.16 (28711859)|VARIABLE_ASSIGNMENT|[128]|attributes|{"s":1,"v":{"type":"gameize__Gameize__c","url":"/services/data/v37.0 (48 more) ..."}}|0x1816086b
+17:37:32.16 (28714971)|STATEMENT_EXECUTE|[129]
+17:37:32.16 (28720708)|HEAP_ALLOCATE|[129]|Bytes:4
+17:37:32.16 (28731567)|ENTERING_MANAGED_PKG|
+17:37:32.16 (28750502)|VARIABLE_SCOPE_BEGIN|[129]|objectName|String|false|false
+17:37:32.16 (28755767)|VARIABLE_ASSIGNMENT|[129]|objectName|"gameize__Gameize__c"
+17:37:32.16 (28762770)|HEAP_ALLOCATE|[130]|Bytes:4
+17:37:32.16 (28775387)|ENTERING_MANAGED_PKG|
+17:37:32.16 (28797881)|ENTERING_MANAGED_PKG|
+17:37:32.16 (28818215)|HEAP_ALLOCATE|[130]|Bytes:79
+17:37:32.16 (28832243)|ENTERING_MANAGED_PKG|
+17:37:32.16 (28836407)|HEAP_ALLOCATE|[130]|Bytes:16
+17:37:32.16 (28843614)|ENTERING_MANAGED_PKG|
+17:37:32.16 (28857514)|HEAP_ALLOCATE|[130]|Bytes:5
+17:37:32.16 (28868074)|VARIABLE_SCOPE_BEGIN|[130]|fieldName|String|false|false
+17:37:32.16 (28873328)|VARIABLE_ASSIGNMENT|[130]|fieldName|"attributes"
+17:37:32.16 (28875752)|STATEMENT_EXECUTE|[130]
+17:37:32.16 (28876861)|STATEMENT_EXECUTE|[131]
+17:37:32.16 (28889609)|ENTERING_MANAGED_PKG|
+17:37:32.16 (28914200)|VARIABLE_SCOPE_BEGIN|[131]|field|Object|false|false
+17:37:32.16 (28930271)|VARIABLE_ASSIGNMENT|[131]|field|{"s":1,"v":{"type":"gameize__Gameize__c","url":"/services/data/v37.0 (48 more) ..."}}
+17:37:32.16 (28946296)|STATEMENT_EXECUTE|[132]
+17:37:32.16 (28957650)|HEAP_ALLOCATE|[130]|Bytes:5
+17:37:32.16 (28966391)|VARIABLE_SCOPE_BEGIN|[130]|fieldName|String|false|false
+17:37:32.16 (28970824)|VARIABLE_ASSIGNMENT|[130]|fieldName|"Id"
+17:37:32.16 (28972825)|STATEMENT_EXECUTE|[130]
+17:37:32.16 (28973846)|STATEMENT_EXECUTE|[131]
+17:37:32.16 (28985660)|ENTERING_MANAGED_PKG|
+17:37:32.16 (28994132)|VARIABLE_SCOPE_BEGIN|[131]|field|Object|false|false
+17:37:32.16 (28999593)|VARIABLE_ASSIGNMENT|[131]|field|"a0041000000j7nTAAQ"
+17:37:32.16 (29007373)|HEAP_ALLOCATE|[134]|Bytes:68
+17:37:32.16 (29024519)|STATEMENT_EXECUTE|[136]
+17:37:32.16 (29026038)|STATEMENT_EXECUTE|[137]
+17:37:32.16 (29033227)|HEAP_ALLOCATE|[137]|Bytes:4
+17:37:32.16 (29045158)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29066362)|VARIABLE_SCOPE_BEGIN|[137]|fieldNames|Set<String>|true|false
+17:37:32.16 (29082868)|VARIABLE_ASSIGNMENT|[137]|fieldNames|{"s":1,"v":[]}|0x1aab63dc
+17:37:32.16 (29096429)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29118585)|STATEMENT_EXECUTE|[138]
+17:37:32.16 (29123447)|STATEMENT_EXECUTE|[139]
+17:37:32.16 (29135085)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29153067)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:37:32.16 (29159455)|STATEMENT_EXECUTE|[140]
+17:37:32.16 (29170582)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29186940)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:-4
+17:37:32.16 (29198056)|HEAP_ALLOCATE|[130]|Bytes:5
+17:37:32.16 (29206888)|VARIABLE_SCOPE_BEGIN|[130]|fieldName|String|false|false
+17:37:32.16 (29213840)|VARIABLE_ASSIGNMENT|[130]|fieldName|"gameize__dataFavorit (4 more) ..."
+17:37:32.16 (29215965)|STATEMENT_EXECUTE|[130]
+17:37:32.16 (29217104)|STATEMENT_EXECUTE|[131]
+17:37:32.16 (29228921)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29237348)|VARIABLE_SCOPE_BEGIN|[131]|field|Object|false|false
+17:37:32.16 (29244634)|VARIABLE_ASSIGNMENT|[131]|field|"[{\"name\":\"Hangman\",\" (27 more) ..."
+17:37:32.16 (29258725)|STATEMENT_EXECUTE|[136]
+17:37:32.16 (29260014)|STATEMENT_EXECUTE|[137]
+17:37:32.16 (29266234)|HEAP_ALLOCATE|[137]|Bytes:4
+17:37:32.16 (29276367)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29281323)|VARIABLE_SCOPE_BEGIN|[137]|fieldNames|Set<String>|true|false
+17:37:32.16 (29294043)|VARIABLE_ASSIGNMENT|[137]|fieldNames|{"s":1,"v":[]}|0x415cf1a4
+17:37:32.16 (29301605)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29308801)|STATEMENT_EXECUTE|[138]
+17:37:32.16 (29317378)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29331229)|VARIABLE_ASSIGNMENT|[138]|fieldNames|{"s":1,"v":["Id"]}|0x1aab63dc
+17:37:32.16 (29333543)|STATEMENT_EXECUTE|[139]
+17:37:32.16 (29341412)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29346027)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:37:32.16 (29355127)|STATEMENT_EXECUTE|[140]
+17:37:32.16 (29362345)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29374727)|HEAP_ALLOCATE|[130]|Bytes:5
+17:37:32.16 (29383066)|VARIABLE_SCOPE_BEGIN|[130]|fieldName|String|false|false
+17:37:32.16 (29389082)|VARIABLE_ASSIGNMENT|[130]|fieldName|"gameize__dataHistory (3 more) ..."
+17:37:32.16 (29391202)|STATEMENT_EXECUTE|[130]
+17:37:32.16 (29392243)|STATEMENT_EXECUTE|[131]
+17:37:32.16 (29401248)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29409482)|VARIABLE_SCOPE_BEGIN|[131]|field|Object|false|false
+17:37:32.16 (29416432)|VARIABLE_ASSIGNMENT|[131]|field|"[{\"name\":\"Hangman\",\" (1192 more) ..."
+17:37:32.16 (29428557)|STATEMENT_EXECUTE|[136]
+17:37:32.16 (29429726)|STATEMENT_EXECUTE|[137]
+17:37:32.16 (29435210)|HEAP_ALLOCATE|[137]|Bytes:4
+17:37:32.16 (29443969)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29448671)|VARIABLE_SCOPE_BEGIN|[137]|fieldNames|Set<String>|true|false
+17:37:32.16 (29460446)|VARIABLE_ASSIGNMENT|[137]|fieldNames|{"s":1,"v":[]}|0x69a1ecb4
+17:37:32.16 (29467092)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29473501)|STATEMENT_EXECUTE|[138]
+17:37:32.16 (29480304)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29493356)|VARIABLE_ASSIGNMENT|[138]|fieldNames|{"s":1,"v":["Id","gameize__dataFavorit (4 more) ..."]}|0x1aab63dc
+17:37:32.16 (29496047)|STATEMENT_EXECUTE|[139]
+17:37:32.16 (29503649)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29508394)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:37:32.16 (29512770)|STATEMENT_EXECUTE|[140]
+17:37:32.16 (29519026)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29530262)|HEAP_ALLOCATE|[130]|Bytes:5
+17:37:32.16 (29538291)|VARIABLE_ASSIGNMENT|[130]|fieldName|null
+17:37:32.16 (29546219)|METHOD_EXIT|[117]|01p41000000CNQM|gameize.ETLC_SecuredDB.findFieldsRecursive(Map<String,Set<String>>, Map<String,ANY>)
+17:37:32.16 (29552808)|HEAP_ALLOCATE|[116]|Bytes:5
+17:37:32.16 (29562378)|VARIABLE_ASSIGNMENT|[116]|record|null
+17:37:32.16 (29566636)|HEAP_ALLOCATE|[119]|Bytes:4
+17:37:32.16 (29575081)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29596820)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29604099)|HEAP_ALLOCATE|[119]|Bytes:27
+17:37:32.16 (29613312)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29616440)|HEAP_ALLOCATE|[119]|Bytes:4
+17:37:32.16 (29622736)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29631484)|HEAP_ALLOCATE|[119]|Bytes:5
+17:37:32.16 (29639888)|VARIABLE_SCOPE_BEGIN|[119]|objectName|String|false|false
+17:37:32.16 (29645196)|VARIABLE_ASSIGNMENT|[119]|objectName|"gameize__Gameize__c"
+17:37:32.16 (29647682)|STATEMENT_EXECUTE|[119]
+17:37:32.16 (29648704)|STATEMENT_EXECUTE|[120]
+17:37:32.16 (29654588)|HEAP_ALLOCATE|[120]|Bytes:2
+17:37:32.16 (29662642)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29698338)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29714752)|HEAP_ALLOCATE|[120]|Bytes:55
+17:37:32.16 (29726623)|HEAP_ALLOCATE|[120]|Bytes:76
+17:37:32.16 (29736278)|ENTERING_MANAGED_PKG|
+17:37:32.16 (29743776)|USER_DEBUG|[120]|DEBUG|gameize__Gameize__c: {Id, gameize__dataFavorite__c, gameize__dataHistory__c}
+17:37:32.16 (29754392)|HEAP_ALLOCATE|[119]|Bytes:5
+17:37:32.16 (29762894)|VARIABLE_ASSIGNMENT|[119]|objectName|null
+17:37:32.16 (29765711)|STATEMENT_EXECUTE|[122]
+17:37:32.16 (29774986)|METHOD_EXIT|[29]|01p41000000CNQM|gameize.ETLC_SecuredDB.findFields(List<SObject>)
+17:37:32.16 (29788700)|METHOD_ENTRY|[29]|01p41000000CNQM|gameize.ETLC_SecuredDB.validate(gameize.ETLC_SecuredDB.Operation, Map<String,Set<String>>)
+17:37:32.16 (29795493)|VARIABLE_SCOPE_BEGIN|[55]|op|gameize.ETLC_SecuredDB.Operation|true|false
+17:37:32.16 (29807098)|VARIABLE_ASSIGNMENT|[55]|op|"Querying"|0x78d28e1d
+17:37:32.16 (29810518)|VARIABLE_SCOPE_BEGIN|[55]|mapFieldNames|Map<String,Set<String>>|true|false
+17:37:32.16 (29828153)|VARIABLE_ASSIGNMENT|[55]|mapFieldNames|{"s":1,"v":{"gameize__Gameize__c":{"s":2,"v":["Id","gameize__dataFavorit (4 more) ...","gameize__dataHistory (3 more) ..."]}}}|0x45dd4709
+17:37:32.16 (29835535)|HEAP_ALLOCATE|[56]|Bytes:5
+17:37:32.16 (29839059)|STATEMENT_EXECUTE|[55]
+17:37:32.16 (29840291)|STATEMENT_EXECUTE|[56]
+17:37:32.16 (29846339)|VARIABLE_SCOPE_BEGIN|[56]|securityMessage|String|false|false
+17:37:32.16 (29850218)|VARIABLE_ASSIGNMENT|[56]|securityMessage|null
+17:37:32.16 (29851564)|STATEMENT_EXECUTE|[57]
+17:37:32.16 (29872794)|ENTERING_MANAGED_PKG|
+17:37:32.16 (42638143)|HEAP_ALLOCATE|[57]|Bytes:1256
+17:37:32.16 (42653560)|VARIABLE_SCOPE_BEGIN|[57]|mapObjects|Map<String,Schema.SObjectType>|true|false
+17:37:32.16 (42814355)|VARIABLE_ASSIGNMENT|[57]|mapObjects|"{acceptedeventrelation=AcceptedEventRelation, account=Account, accountcontactrole=AccountContactRole, accounthistory=AccountHistory, accountpartner=AccountPartner, accountshare=AccountShare, actionlinkgrouptemplate=ActionLinkGroupTemplate, actionlinktemplate=ActionLinkTemplate, activityhistory=ActivityHistory, additionalnumber=AdditionalNumber, ...}"|0x5e258172
+17:37:32.16 (42824360)|HEAP_ALLOCATE|[58]|Bytes:4
+17:37:32.16 (42841291)|ENTERING_MANAGED_PKG|
+17:37:32.16 (42871369)|ENTERING_MANAGED_PKG|
+17:37:32.16 (42881408)|HEAP_ALLOCATE|[58]|Bytes:27
+17:37:32.16 (42892079)|ENTERING_MANAGED_PKG|
+17:37:32.16 (42895815)|HEAP_ALLOCATE|[58]|Bytes:4
+17:37:32.16 (42902282)|ENTERING_MANAGED_PKG|
+17:37:32.16 (42913970)|HEAP_ALLOCATE|[58]|Bytes:5
+17:37:32.16 (42924914)|VARIABLE_SCOPE_BEGIN|[58]|sObjectName|String|false|false
+17:37:32.16 (42931821)|VARIABLE_ASSIGNMENT|[58]|sObjectName|"gameize__Gameize__c"
+17:37:32.16 (42934715)|STATEMENT_EXECUTE|[58]
+17:37:32.16 (42936037)|STATEMENT_EXECUTE|[59]
+17:37:32.16 (42943800)|HEAP_ALLOCATE|[59]|Bytes:9
+17:37:32.16 (42946567)|HEAP_ALLOCATE|[59]|Bytes:7
+17:37:32.16 (42962108)|ENTERING_MANAGED_PKG|
+17:37:32.16 (42988907)|HEAP_ALLOCATE|[59]|Bytes:8
+17:37:32.16 (42996489)|HEAP_ALLOCATE|[59]|Bytes:1
+17:37:32.16 (43008171)|HEAP_ALLOCATE|[59]|Bytes:44
+17:37:32.16 (43017299)|VARIABLE_ASSIGNMENT|[59]|securityMessage|"CRUD on [gameize__Ga (24 more) ..."
+17:37:32.16 (43020256)|STATEMENT_EXECUTE|[60]
+17:37:32.16 (43026179)|HEAP_ALLOCATE|[60]|Bytes:10
+17:37:32.16 (43030329)|HEAP_ALLOCATE|[60]|Bytes:54
+17:37:32.16 (43044560)|ENTERING_MANAGED_PKG|
+17:37:32.16 (43063438)|USER_DEBUG|[60]|DEBUG|Checking: CRUD on [gameize__Gameize__c] for [Querying]
+17:37:32.16 (43069636)|STATEMENT_EXECUTE|[61]
+17:37:32.16 (43084692)|ENTERING_MANAGED_PKG|
+17:37:32.16 (43316633)|HEAP_ALLOCATE|[61]|Bytes:4
+17:37:32.16 (43350112)|VARIABLE_SCOPE_BEGIN|[61]|drSObj|Schema.DescribeSObjectResult|true|false
+17:37:32.16 (43420927)|VARIABLE_ASSIGNMENT|[61]|drSObj|"common.api.soap.wsdl.DescribeSObjectResult@53f8aaa0"|0x34d6c737
+17:37:32.16 (43545087)|STATEMENT_EXECUTE|[64]
+17:37:32.16 (43567091)|STATEMENT_EXECUTE|[65]
+17:37:32.16 (43611545)|STATEMENT_EXECUTE|[77]
+17:37:32.16 (43613407)|STATEMENT_EXECUTE|[79]
+17:37:32.16 (43993684)|HEAP_ALLOCATE|[79]|Bytes:60
+17:37:32.16 (44003677)|VARIABLE_SCOPE_BEGIN|[79]|mapFields|Map<String,Schema.SObjectField>|true|false
+17:37:32.16 (44137449)|VARIABLE_ASSIGNMENT|[79]|mapFields|"{createdbyid=CreatedById, createddate=CreatedDate, gameize__datafavorite__c=gameize__dataFavorite__c, gameize__datahistory__c=gameize__dataHistory__c, gameize__user__c=gameize__User__c, id=Id, isdeleted=IsDeleted, lastmodifiedbyid=LastModifiedById, lastmodifieddate=LastModifiedDate, lastreferenceddate=LastReferencedDate, ...}"|0x589815d6
+17:37:32.16 (44147435)|HEAP_ALLOCATE|[80]|Bytes:4
+17:37:32.16 (44162734)|ENTERING_MANAGED_PKG|
+17:37:32.16 (44190065)|ENTERING_MANAGED_PKG|
+17:37:32.16 (44205288)|ENTERING_MANAGED_PKG|
+17:37:32.16 (44209365)|HEAP_ALLOCATE|[80]|Bytes:12
+17:37:32.16 (44216833)|ENTERING_MANAGED_PKG|
+17:37:32.16 (44228046)|HEAP_ALLOCATE|[80]|Bytes:5
+17:37:32.16 (44238325)|VARIABLE_SCOPE_BEGIN|[80]|fieldName|String|false|false
+17:37:32.16 (44244672)|VARIABLE_ASSIGNMENT|[80]|fieldName|"Id"
+17:37:32.16 (44247502)|STATEMENT_EXECUTE|[80]
+17:37:32.16 (44248779)|STATEMENT_EXECUTE|[81]
+17:37:32.16 (44264352)|ENTERING_MANAGED_PKG|
+17:37:32.16 (44714477)|HEAP_ALLOCATE|[81]|Bytes:8
+17:37:32.16 (44743524)|VARIABLE_SCOPE_BEGIN|[81]|drField|Schema.DescribeFieldResult|true|false
+17:37:32.16 (44810729)|VARIABLE_ASSIGNMENT|[81]|drField|"common.api.soap.wsdl.Field@61be0dff"|0x3012c0a4
+17:37:32.16 (44831839)|STATEMENT_EXECUTE|[99]
+17:37:32.16 (44833321)|STATEMENT_EXECUTE|[100]
+17:37:32.16 (44842221)|HEAP_ALLOCATE|[100]|Bytes:22
+17:37:32.16 (44845960)|HEAP_ALLOCATE|[100]|Bytes:1
+17:37:32.16 (44867687)|ENTERING_MANAGED_PKG|
+17:37:32.16 (44894512)|HEAP_ALLOCATE|[100]|Bytes:8
+17:37:32.16 (44914840)|HEAP_ALLOCATE|[100]|Bytes:59
+17:37:32.16 (44917383)|HEAP_ALLOCATE|[100]|Bytes:35
+17:37:32.16 (44920573)|HEAP_ALLOCATE|[100]|Bytes:94
+17:37:32.16 (44934261)|ENTERING_MANAGED_PKG|
+17:37:32.16 (44942086)|USER_DEBUG|[100]|DEBUG|Bypass Check: FLS on [gameize__Gameize__c.Id] for [Querying] since it's not isPermissionable()
+17:37:32.16 (44955648)|HEAP_ALLOCATE|[80]|Bytes:5
+17:37:32.16 (44966248)|VARIABLE_SCOPE_BEGIN|[80]|fieldName|String|false|false
+17:37:32.16 (44974703)|VARIABLE_ASSIGNMENT|[80]|fieldName|"gameize__dataFavorit (4 more) ..."
+17:37:32.16 (44977492)|STATEMENT_EXECUTE|[80]
+17:37:32.16 (44978751)|STATEMENT_EXECUTE|[81]
+17:37:32.16 (44992617)|ENTERING_MANAGED_PKG|
+17:37:32.16 (45444013)|HEAP_ALLOCATE|[81]|Bytes:8
+17:37:32.16 (45456082)|VARIABLE_SCOPE_BEGIN|[81]|drField|Schema.DescribeFieldResult|true|false
+17:37:32.16 (45518575)|VARIABLE_ASSIGNMENT|[81]|drField|"common.api.soap.wsdl.Field@57b71b27"|0x73ca37f0
+17:37:32.16 (45530565)|STATEMENT_EXECUTE|[82]
+17:37:32.16 (45532073)|STATEMENT_EXECUTE|[83]
+17:37:32.16 (45541050)|HEAP_ALLOCATE|[83]|Bytes:8
+17:37:32.16 (45564363)|ENTERING_MANAGED_PKG|
+17:37:32.16 (45590786)|HEAP_ALLOCATE|[83]|Bytes:8
+17:37:32.16 (45604789)|HEAP_ALLOCATE|[83]|Bytes:67
+17:37:32.16 (45608888)|HEAP_ALLOCATE|[83]|Bytes:68
+17:37:32.16 (45617104)|VARIABLE_ASSIGNMENT|[83]|securityMessage|"FLS on [gameize__Gam (48 more) ..."
+17:37:32.16 (45619848)|STATEMENT_EXECUTE|[84]
+17:37:32.16 (45627051)|HEAP_ALLOCATE|[84]|Bytes:78
+17:37:32.16 (45641363)|ENTERING_MANAGED_PKG|
+17:37:32.16 (45660145)|USER_DEBUG|[84]|DEBUG|Checking: FLS on [gameize__Gameize__c.gameize__dataFavorite__c] for [Querying]
+17:37:32.16 (45737476)|STATEMENT_EXECUTE|[87]
+17:37:32.16 (45752782)|STATEMENT_EXECUTE|[88]
+17:37:32.16 (45766410)|HEAP_ALLOCATE|[80]|Bytes:5
+17:37:32.16 (45776790)|VARIABLE_SCOPE_BEGIN|[80]|fieldName|String|false|false
+17:37:32.16 (45784907)|VARIABLE_ASSIGNMENT|[80]|fieldName|"gameize__dataHistory (3 more) ..."
+17:37:32.16 (45787071)|STATEMENT_EXECUTE|[80]
+17:37:32.16 (45788170)|STATEMENT_EXECUTE|[81]
+17:37:32.16 (45801679)|ENTERING_MANAGED_PKG|
+17:37:32.16 (45932421)|HEAP_ALLOCATE|[81]|Bytes:8
+17:37:32.16 (45942089)|VARIABLE_SCOPE_BEGIN|[81]|drField|Schema.DescribeFieldResult|true|false
+17:37:32.16 (46002093)|VARIABLE_ASSIGNMENT|[81]|drField|"common.api.soap.wsdl.Field@ab422ae"|0x22753991
+17:37:32.16 (46013884)|STATEMENT_EXECUTE|[82]
+17:37:32.16 (46015214)|STATEMENT_EXECUTE|[83]
+17:37:32.16 (46040276)|ENTERING_MANAGED_PKG|
+17:37:32.16 (46048073)|HEAP_ALLOCATE|[83]|Bytes:8
+17:37:32.16 (46060798)|HEAP_ALLOCATE|[83]|Bytes:66
+17:37:32.16 (46064492)|HEAP_ALLOCATE|[83]|Bytes:67
+17:37:32.16 (46073054)|VARIABLE_ASSIGNMENT|[83]|securityMessage|"FLS on [gameize__Gam (47 more) ..."
+17:37:32.16 (46075541)|STATEMENT_EXECUTE|[84]
+17:37:32.16 (46081470)|HEAP_ALLOCATE|[84]|Bytes:77
+17:37:32.16 (46091202)|ENTERING_MANAGED_PKG|
+17:37:32.16 (46102864)|USER_DEBUG|[84]|DEBUG|Checking: FLS on [gameize__Gameize__c.gameize__dataHistory__c] for [Querying]
+17:37:32.16 (46136677)|STATEMENT_EXECUTE|[87]
+17:37:32.16 (46143823)|STATEMENT_EXECUTE|[88]
+17:37:32.16 (46154993)|HEAP_ALLOCATE|[80]|Bytes:5
+17:37:32.16 (46165345)|VARIABLE_ASSIGNMENT|[80]|fieldName|null
+17:37:32.16 (46170992)|HEAP_ALLOCATE|[58]|Bytes:5
+17:37:32.16 (46176118)|VARIABLE_ASSIGNMENT|[58]|sObjectName|null
+17:37:32.16 (46183929)|METHOD_EXIT|[29]|01p41000000CNQM|gameize.ETLC_SecuredDB.validate(gameize.ETLC_SecuredDB.Operation, Map<String,Set<String>>)
+17:37:32.16 (46189368)|METHOD_EXIT|[27]|01p41000000CNQM|gameize.ETLC_SecuredDB.validateQuery(List<SObject>)
+17:37:32.16 (46191654)|STATEMENT_EXECUTE|[29]
+17:37:32.16 (46203709)|HEAP_ALLOCATE|[29]|Bytes:16
+17:37:32.16 (46211861)|METHOD_ENTRY|[29]||System.JSON.serialize(Object)
+17:37:32.16 (46319259)|METHOD_EXIT|[29]||System.JSON.serialize(Object)
+17:37:32.16 (46330577)|VARIABLE_ASSIGNMENT|[29]|returnData|"{\"attributes\":{\"type (1596 more) ..."
+17:37:32.16 (46381418)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchUserDa (4 more) ...","operation":"GameizeController"}|0x75ca130f
+17:37:32.16 (46391210)|STATEMENT_EXECUTE|[30]
+17:37:32.16 (46397936)|STATEMENT_EXECUTE|[33]
+17:37:32.16 (46405038)|METHOD_EXIT|[9]|01p41000000CQtU|gameize.GameizeController.fetchUserData(Id)
+17:37:32.16 (46429119)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchUserDa (4 more) ...","operation":"GameizeController"}|0x75ca130f
+17:37:32.16 (46434370)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|"{\"attributes\":{\"type (1596 more) ..."
+17:37:32.16 (46442768)|VARIABLE_ASSIGNMENT|[12]|this.output|"{\"attributes\":{\"type (1596 more) ..."|0x75ca130f
+17:37:32.16 (46446934)|STATEMENT_EXECUTE|[10]
+17:37:32.16 (46479706)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchUserDa (4 more) ...","operation":"GameizeController","output":"{\"attributes\":{\"type (1596 more) ..."}|0x75ca130f
+17:37:32.16 (46503295)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"debug":false,"input":"{\"mode\":\"fetchUserDa (4 more) ...","operation":"GameizeController","output":"{\"attributes\":{\"type (1596 more) ..."}|0x75ca130f
+17:37:32.16 (46508800)|VARIABLE_ASSIGNMENT|[EXTERNAL]|value|true
+17:37:32.16 (46511768)|HEAP_ALLOCATE|[15]|Bytes:5
+17:37:32.16 (46516894)|VARIABLE_ASSIGNMENT|[15]|this.outputFlag|true|0x75ca130f
+17:37:32.16 (46524960)|METHOD_EXIT|[8]|01p41000000CQtU|gameize.GameizeController.process(gameize.ETLC_ApexBridge_Data)
+17:37:32.16 (46527773)|STATEMENT_EXECUTE|[23]
+17:37:32.16 (46535065)|METHOD_ENTRY|[23]|01p41000000CNQH|gameize.ETLC_ApexBridge_Data.toJSON()
+17:37:32.16 (46537915)|VARIABLE_SCOPE_BEGIN|[57]|this|gameize.ETLC_ApexBridge_Data|true|false
+17:37:32.16 (46556751)|VARIABLE_ASSIGNMENT|[57]|this|{"debug":false,"input":"{\"mode\":\"fetchUserDa (4 more) ...","operation":"GameizeController","output":"{\"attributes\":{\"type (1596 more) ...","outputFlag":true}|0x75ca130f
+17:37:32.16 (46560726)|STATEMENT_EXECUTE|[57]
+17:37:32.16 (46561781)|STATEMENT_EXECUTE|[58]
+17:37:32.16 (46567824)|METHOD_ENTRY|[58]||System.JSON.serialize(Object)
+17:37:32.16 (46635184)|STATEMENT_EXECUTE|[22]
+17:37:32.16 (46637901)|STATEMENT_EXECUTE|[23]
+17:37:32.16 (46645280)|HEAP_ALLOCATE|[23]|Bytes:5
+17:37:32.16 (46652256)|VARIABLE_ASSIGNMENT|[23]|this.isSuccess|true|0x75ca130f
+17:37:32.16 (46653986)|STATEMENT_EXECUTE|[24]
+17:37:32.16 (46681234)|STATEMENT_EXECUTE|[31]
+17:37:32.16 (46683374)|STATEMENT_EXECUTE|[32]
+17:37:32.16 (46689470)|HEAP_ALLOCATE|[32]|Bytes:4
+17:37:32.16 (46707422)|VARIABLE_ASSIGNMENT|[32]|this.messages|{"s":1,"v":{}}|0x75ca130f
+17:37:32.16 (46709658)|STATEMENT_EXECUTE|[33]
+17:37:32.16 (46878249)|METHOD_EXIT|[58]||System.JSON.serialize(Object)
+17:37:32.16 (46882965)|METHOD_EXIT|[23]|01p41000000CNQH|gameize.ETLC_ApexBridge_Data.toJSON()
+17:37:32.16 (46891867)|SYSTEM_MODE_EXIT|false
+17:37:32.46 (46924772)|CUMULATIVE_LIMIT_USAGE
+17:37:32.46 (46924772)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:37:32.46 (46924772)|LIMIT_USAGE_FOR_NS|gameize|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:37:32.46 (46924772)|CUMULATIVE_LIMIT_USAGE_END
+
+17:37:32.16 (46992258)|CODE_UNIT_FINISHED|ETLC_ApexBridge_Controller.execute
