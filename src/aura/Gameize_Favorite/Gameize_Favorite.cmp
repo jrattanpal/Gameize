@@ -5,5 +5,28 @@
     <aura:attribute name="dataHistory" type="Object[]" />
     
     <aura:registerEvent name="Gameize_ShowGame" type="c:Gameize_ShowGame"/>
-    <ui:button label="test" press="{!c.onPress}" />
+    <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+        <thead>
+            <tr class="slds-text-heading--label">
+                <th scope="col">
+                    <div class="slds-truncate" title="Game">Game</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="">&nbsp;</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.dataFavorite}" var="obj">
+                <tr>
+                    <th scope="row" data-label="Game">
+                        <div class="slds-truncate" title="Cloudhub">{!obj.name}</div>
+                    </th>
+                    <th scope="row" data-label="">
+                        <button class="slds-button slds-button--brand" type="button" onclick="{!c.onPress}" data-id="{!obj.id}">Play</button>
+                    </th>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>        
 </aura:component>

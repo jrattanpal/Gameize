@@ -13,7 +13,6 @@
     <aura:handler name="Gameize_DataUpdated" event="c:Gameize_DataUpdated" action="{!c.handleDataUpdatedEvent}"/>
     <aura:handler event="c:Gameize_ShowGame" action="{!c.handleShowGameEvent}"/>
 
-
     <div class="slds">
         <div class="slds-tabs--default">
             <ul class="slds-tabs--default__nav" role="tablist">
@@ -24,7 +23,7 @@
                 </li>
                 <li class="{! 'slds-tabs--scoped__item slds-text-heading--label ' + (v.activeTabNumber == '2'?'slds-active':'')}" title="Item One" role="presentation">
                     <a onclick="{!c.changeTab}" class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="2" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">
-                        Favorite Games
+                        Favorite
                     </a>
                 </li>
                 <li class="{! 'slds-tabs--scoped__item slds-text-heading--label ' + (v.activeTabNumber == '3'?'slds-active':'')}" title="Item One" role="presentation">
@@ -40,7 +39,7 @@
                 <c:Gameize_Favorite debug="{!v.debug}" gameList="{!v.gameList}" dataFavorite="{!v.dataFavorite}" dataHistory="{!v.dataHistory}" />
             </div>
             <div class="{! 'slds-tabs--scoped__content ' + (v.activeTabNumber == '3'? 'slds-show': 'slds-hide')}" role="tabpanel" aria-labelledby="tab-default-1__item">
-                Game History
+                <c:Gameize_History debug="{!v.debug}" gameList="{!v.gameList}" dataFavorite="{!v.dataFavorite}" dataHistory="{!v.dataHistory}" />
             </div>
         </div>
     </div>

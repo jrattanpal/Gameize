@@ -24,7 +24,6 @@
     loadGame: function(component, helper, gameList, gameSelectedIndex){
         var Gameize_Helper = component.find('Gameize_Helper');
         var gameSelected = gameList[gameSelectedIndex];
-console.log(gameSelected);
         component.set('v.gameSelected', gameSelected);
 
         helper.markIfGameAlreadyFavorite(component, helper);
@@ -40,6 +39,7 @@ console.log(gameSelected);
                     //Add the new button to the body array
                     if (component.isValid()) {
                         var body = container.get("v.body");
+                        body.splice(0, 1);
                         body.push(content);
                         container.set("v.body", body);
                         helper.saveInHistory(component, helper, gameSelected);
@@ -56,6 +56,16 @@ console.log(gameSelected);
             Gameize_Helper.showToast('error', 'Error!', 'Some error occurred while selecting a game');
         }
     },
+    toSFDate: function(helper, dateObj){
+	// string format is YYYY-MM-DDThh:mm:ssZ           
+		var dateStr = dateObj.getFullYear() +'-' + helper.pad2(dateObj.getMonth()+1) +'-'+
+            					helper.pad2(dateObj.getDate()) +'T'+helper.pad2(dateObj.getHours())+':'+
+            					helper.pad2(dateObj.getMinutes())+':'+helper.pad2(dateObj.getSeconds())+'Z';
+		return dateStr;
+    },
+    pad2: function (number) {
+	 return (number < 10 ? '0' : '') + number       
+	},
     saveInHistory: function(component, helper, gameSelected){
         var dataHistory = component.get('v.dataHistory');
         var maxHistoryItems = component.get('v.maxHistoryItems');
@@ -65,7 +75,7 @@ console.log(gameSelected);
             dataHistory.splice(0, 1);
         }
         //Add newest entry to history
-        dataHistory.push({name: gameSelected.name, cmpname: gameSelected.cmpname, datePlayed: Date.now()});
+        dataHistory.push({name: gameSelected.name, cmpname: gameSelected.cmpname, datePlayed: Date(), id: gameSelected.id});
 
 
         var apexBridge = component.find("ApexBridge");

@@ -2,7 +2,7 @@
     doInit: function(component, event, helper){
         var Gameize_Helper = component.find('Gameize_Helper');
 
-        var gameList = '[{"id": 1, "name": "Age Counter", "auraid": "agecounter", "cmpname": "AgeCounter", "desc": "Count how long you\'ve lived, in days+hours+minutes."}]';
+        var gameList = '[{"id": 1, "name": "Age Counter", "auraid": "agecounter", "cmpname": "AgeCounter", "desc": "Count how long you\'ve lived, in days+hours+minutes."},{"id": 2, "name": "Hangman", "auraid": "hangman", "cmpname": "Hangman", "desc": "Games are a good way to keep your visitors- and yourself- occupied on your site. Here\'s where this script comes in. It\'s the great JavaScript reincarnation of the classic Hang Man game. Play against the computer. The vocabulary to be used is configurable. Cool!"}]';
         component.set('v.gameList', JSON.parse(gameList));
 
         helper.fetchData(component, helper, Gameize_Helper);
@@ -21,7 +21,7 @@
         }
     },
     handleShowGameEvent: function(component, event, helper){
-       component.set('v.activeTabNumber', 1);
+       component.set('v.activeTabNumber', '1');
     }
 
 })

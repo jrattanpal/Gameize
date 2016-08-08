@@ -1,7 +1,6 @@
 ({
     handleShowGameEvent: function(component, event, helper){
         var SelectedGameId = event.getParam("SelectedGameId");
-        console.log('Captured: '+ SelectedGameId);
         //If there is pre selected game then show that game
         if(SelectedGameId >=0 ) {
             var gameList = component.get('v.gameList');
@@ -29,7 +28,7 @@
         if(component.get('v.isSelectedGameFavorite') == false){
             var dataFavorite = component.get('v.dataFavorite');
             var gameSelected = component.get('v.gameSelected');
-            dataFavorite.push({name: gameSelected.name, cmpname: gameSelected.cmpname});
+            dataFavorite.push({name: gameSelected.name, cmpname: gameSelected.cmpname, id: gameSelected.id});
             helper.saveFavorite(component, helper, Gameize_Helper, true, dataFavorite);
         }else{
             Gameize_Helper.showToast('message', 'Already in favorite list!', 'You have already added this game in your favorite list');
