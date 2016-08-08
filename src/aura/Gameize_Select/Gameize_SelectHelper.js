@@ -9,6 +9,7 @@
                 return true;
             }
         }
+        component.set('v.isSelectedGameFavorite', false);
         return false;
     },
     findGameIndexFromId: function(component, helper, gameList, preGameSelectedId){
@@ -22,6 +23,11 @@
         return Math.floor(Math.random()*gameList.length);
     },
     loadGame: function(component, helper, gameList, gameSelectedIndex){
+        //remove previous game before trying as there is a moment whre it shows up leading to confusion
+        var container = component.find('gameContainer');
+        var body = '';
+        container.set("v.body", body);
+        
         var Gameize_Helper = component.find('Gameize_Helper');
         var gameSelected = gameList[gameSelectedIndex];
         component.set('v.gameSelected', gameSelected);
@@ -64,7 +70,7 @@
 		return dateStr;
     },
     pad2: function (number) {
-	 return (number < 10 ? '0' : '') + number       
+        return (number < 10 ? '0' : '') + number       
 	},
     saveInHistory: function(component, helper, gameSelected){
         var dataHistory = component.get('v.dataHistory');
@@ -83,7 +89,7 @@
             component: component,
             data: {
                 operation: "GameizeController",
-                input: {mode: 'saveData', fieldName:'dataHistory__c', fieldData: JSON.stringify(dataHistory)},
+                input: {mode: 'saveUserData', fieldName:'dataHistory__c', fieldData: JSON.stringify(dataHistory)},
                 debug: component.get('v.debug')
             },
             callBackMethod: function (data) {
@@ -93,13 +99,13 @@
             }
         });
     },
-    saveFavorite: function(component, helper, Gameize_Helper, isItBeingAdded, dataFavorite){
+    saveFavorite: function(component, helper, Gameize_Helper, isItBeingAdded, dataFavorite){        
         var apexBridge = component.find("ApexBridge");
         apexBridge.callApex({
             component: component,
             data: {
                 operation: "GameizeController",
-                input: {mode: 'saveData', fieldName:'dataFavorite__c', fieldData: JSON.stringify(dataFavorite)},
+                input: {mode: 'saveUserData', fieldName:'dataFavorite__c', fieldData: JSON.stringify(dataFavorite)},
                 debug: component.get('v.debug')
             },
             callBackMethod: function (data) {

@@ -1,0 +1,14 @@
+{
+    "projectName": "Gameize1",
+    "username": "gameize@jr.te",
+    "id": "e2f03fe0-5dad-11e6-a687-77e8cc92fcf6",
+    "namespace": "gameize",
+    "environment": "production",
+    "loginUrl": "https://login.salesforce.com/",
+    "workspace": "C:\\Server\\Workspace\\MavensMate",
+    "subscription": [
+        "ApexClass",
+        "AuraDefinitionBundle",
+        "StaticResource"
+    ]
+}

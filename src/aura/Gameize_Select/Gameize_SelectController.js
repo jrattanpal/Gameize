@@ -7,16 +7,10 @@
             helper.loadGame(component, helper, gameList, helper.findGameIndexFromId(component, helper, gameList, SelectedGameId));
         }
     },
-    doInit: function(component, event, helper){
-        var preGameSelectedId = component.get('v.preGameSelectedId');
-
-        //If there is pre selected game then show that game
-        if(preGameSelectedId >=0 ) {
-            var gameList = component.get('v.gameList');
-            helper.loadGame(component, helper, gameList, helper.findGameIndexFromId(component, helper, gameList, preGameSelectedId));
-        }
-    },
     gameizeMe: function(component, event, helper){
+        var Gameize_Helper = component.find('Gameize_Helper_dialog');        
+        Gameize_Helper.hideToast();
+        
         var gameList = component.get('v.gameList');
         helper.loadGame(component, helper, gameList, helper.findGameIndexFromId(component, helper, gameList));
     },
@@ -37,6 +31,8 @@
     removeAsFavorite: function(component, event, helper){
         var Gameize_Helper = component.find('Gameize_Helper_dialog');
 
+        helper.markIfGameAlreadyFavorite(component, helper);
+        
         var dataFavorite = component.get('v.dataFavorite');
         var gameSelected = component.get('v.gameSelected');
 

@@ -13,5 +13,5 @@
     <aura:method name="hideToast" action="{!c.hideToast}" access="public" />
 
     <!-- Div where message will be displayed when showToast is used -->
-    <div aura:id="showToastDiv" id="test"></div>
+    <div aura:id="showToastDiv"></div>
 </aura:component>

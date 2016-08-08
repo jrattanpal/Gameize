@@ -5,17 +5,20 @@ public with sharing class GameizeController extends ETLC_ApexBridge_Abstract {
         if (data.debug) System.debug(data);
         // Depending on the mode, determine which operation to perform
         String mode = (String) data.getInputValue('mode');
-        if (mode == 'fetchData') {
-            data.output = fetchData(UserInfo.getUserId());
+        if (mode == 'fetchUserData') {
+            data.output = fetchUserData(UserInfo.getUserId());
             data.outputFlag = (data.output == null)?false:true;
-        } else if (mode == 'saveData') {
-            data.outputFlag = saveData(UserInfo.getUserId(), userInfo.getUserName(), (String) data.getInputValue('fieldName'), (String) data.getInputValue('fieldData') );
+        }else if (mode == 'saveUserData') {
+            data.outputFlag = saveUserData(UserInfo.getUserId(), userInfo.getUserName(), (String) data.getInputValue('fieldName'), (String) data.getInputValue('fieldData') );
+        }else if (mode == 'fetchGameData') {
+            data.output = fetchGameData();
+            data.outputFlag = (data.output == null)?false:true;
         }
     }
     /**
      * Returns game data for current logged in user
      */
-    public String fetchData(ID userId) {
+    public String fetchUserData(ID userId) {
         String returnData = null;
         try {
             List<Gameize__c> records = [SELECT ID, dataFavorite__c, dataHistory__c From Gameize__c where User__c=:userId limit 1];
@@ -32,7 +35,7 @@ public with sharing class GameizeController extends ETLC_ApexBridge_Abstract {
     /**
      * Save  game data for current logged in user
      */
-    public boolean saveData(ID userId, String userName,  String fieldName, String fieldData) {
+    public boolean saveUserData(ID userId, String userName,  String fieldName, String fieldData) {
         Boolean returnFlag = false;
         try {
             String [] fields = new String [] {'Name', 'gameize__dataFavorite__c', 'gameize__dataHistory__c'};
@@ -71,4 +74,20 @@ public with sharing class GameizeController extends ETLC_ApexBridge_Abstract {
         }Catch(Exception e){ if (apexBridgedata.debug) { System.debug('GameizeController:fetchData:exception:: ' + e.getMessage());  }   }
         return returnFlag;
     }
+    /**
+     * Fetch game list from static resources
+     */
+    public String fetchGameData(){
+        String returnData = null;
+        try{
+            List<StaticResource> records = [select Body from StaticResource where Name = 'Gameize_GameList'];
+            if(records.size()>0){
+                //ETLC_SecuredDB.validateQuery(records);
+                returnData = records[0].Body.toString();
+                System.debug('returnData::'+returnData);
+                if(apexBridgedata.debug){System.debug('GameizeController:fetchData:returnData:: ' + returnData);  }
+            }
+        }Catch(Exception e){ if (apexBridgedata.debug) { System.debug('GameizeController:fetchData:exception:: ' + e.getMessage());  }   }
+        return returnData;
+	}
 }

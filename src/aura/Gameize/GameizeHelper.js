@@ -1,11 +1,11 @@
 ({
-    fetchData: function(component, helper,Gameize_Helper){
+    fetchUserData: function(component, helper,Gameize_Helper){
         var apexBridge = component.find("ApexBridge");
         apexBridge.callApex({
             component: component,
             data: {
                 operation: "GameizeController",
-                input: {mode: 'fetchData'},
+                input: {mode: 'fetchUserData'},
                 debug: component.get('v.debug')
             },
             callBackMethod: function (data) {
@@ -18,6 +18,24 @@
                     }
                 } else {
                     Gameize_Helper.showToast('error', 'Error!', 'Some error occurred while fetching user data record');
+                }
+            }
+        });
+    },
+    fetchGameData: function(component, helper, Gameize_Helper){
+        var apexBridge = component.find("ApexBridge");
+        apexBridge.callApex({
+            component: component,
+            data: {
+                operation: "GameizeController",
+                input: {mode: 'fetchGameData'},
+                debug: component.get('v.debug')
+            },
+            callBackMethod: function (data) {
+                if (data.outputFlag == true) {
+                    component.set('v.gameList', data.output);
+                } else {
+                    Gameize_Helper.showToast('error', 'Error!', 'Some error occurred while fetching Game Data record');
                 }
             }
         });
