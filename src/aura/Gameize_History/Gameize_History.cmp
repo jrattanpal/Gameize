@@ -12,9 +12,6 @@
                     <div class="slds-truncate" title="Game">Game</div>
                 </th>
                 <th scope="col">
-                    <div class="slds-truncate" title="Game">Date Played</div>
-                </th>
-                <th scope="col">
                     <div class="slds-truncate" title="">&nbsp;</div>
                 </th>
             </tr>
@@ -23,10 +20,9 @@
             <aura:iteration items="{!v.dataHistory}" var="obj">
                 <tr>
                     <th scope="row" data-label="Game">
-                        <div class="slds-truncate" title="{!obj.name}">{!obj.name}</div>
-                    </th>
-                    <th scope="row" data-label="Game">
-                        <ui:outputDateTime value="{!obj.datePlayed}"/>
+                        <div class="slds-truncate" title="{!obj.name}">
+                            {!obj.name}<br/><ui:outputDateTime class="slds-text-body--small" value="{!obj.datePlayed}"/>
+                        </div>
                     </th>
                     <th scope="row" data-label="">
                         <button class="slds-button slds-button--brand" type="button" onclick="{!c.onPress}" data-id="{!obj.id}">Play</button>

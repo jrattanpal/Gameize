@@ -1,10 +1,11 @@
-<aura:component description="Gameize" access="global">
-    <aura:attribute name="debug" type="Boolean" default="false"/>
-    <aura:attribute name="activeTabNumber" type="String" default="1" />
+<aura:component description="Gameize" access="global" implements="flexipage:availableForAllPageTypes,force:appHostable">
+    <aura:attribute name="debug" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="maxHistoryItems" type="Integer" default="10" access="global"/>
+    <aura:attribute name="activeTabNumber" type="String" default="1" access="global" />
+    
     <aura:attribute name="gameList" type="Object[]" />
     <aura:attribute name="dataFavorite" type="Object[]" />
     <aura:attribute name="dataHistory" type="Object[]" />
-    <aura:attribute name="maxHistoryItems" type="Integer" default="10" />
 
     <c:ETLC_ApexBridge aura:id="ApexBridge" debugClient="{!v.debug}" debugServer="{!v.debug}" />
     <c:Gameize_Resources />

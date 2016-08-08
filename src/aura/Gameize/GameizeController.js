@@ -13,6 +13,7 @@
         component.set('v.activeTabNumber', selectedItem.getAttribute('tabindex'));
     },
     handleDataUpdatedEvent: function(component, event, helper){
+        //Update Favorite and History data as updated upon add/remove favorite and tracked in history
         var whichData = event.getParam("whichData");
         var data = event.getParam("data");
         if(whichData === 'dataFavorite'){
@@ -22,7 +23,9 @@
         }
     },
     handleShowGameEvent: function(component, event, helper){
-       component.set('v.activeTabNumber', '1');
+        //Event is raised When a game is selected from favorite and history
+        //We always need first tab to show the game
+        component.set('v.activeTabNumber', '1');
     }
 
 })

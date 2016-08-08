@@ -1,4 +1,5 @@
 ({
+    //Get user data like favorites or history; if it exists
     fetchUserData: function(component, helper,Gameize_Helper){
         var apexBridge = component.find("ApexBridge");
         apexBridge.callApex({
@@ -17,11 +18,15 @@
                         component.set('v.dataHistory', JSON.parse(data.output.gameize__dataHistory__c));
                     }
                 } else {
-                    Gameize_Helper.showToast('error', 'Error!', 'Some error occurred while fetching user data record');
+                    //A user record might not have been created yet so displaying error is not helpful
+                    //Hence commenting following line but can be re-added if needed
+                    //Gameize_Helper.showToast('error', 'Error!', 'Some error occurred while fetching user data record');
                 }
             }
         });
     },
+    //get JSON data from static resource
+    //This will get games added to the Gameize
     fetchGameData: function(component, helper, Gameize_Helper){
         var apexBridge = component.find("ApexBridge");
         apexBridge.callApex({

@@ -22,13 +22,15 @@
         }
         return Math.floor(Math.random()*gameList.length);
     },
-    loadGame: function(component, helper, gameList, gameSelectedIndex){
+    loadGame: function(component, helper, Gameize_Helper, gameList, gameSelectedIndex){
+        //Hide any existing Toast message
+        Gameize_Helper.hideToast();
+        
         //remove previous game before trying as there is a moment whre it shows up leading to confusion
         var container = component.find('gameContainer');
         var body = '';
         container.set("v.body", body);
         
-        var Gameize_Helper = component.find('Gameize_Helper');
         var gameSelected = gameList[gameSelectedIndex];
         component.set('v.gameSelected', gameSelected);
 
@@ -76,7 +78,7 @@
         var dataHistory = component.get('v.dataHistory');
         var maxHistoryItems = component.get('v.maxHistoryItems');
 
-        //Remove oldest item
+        //Remove oldest item if history has reached maximum limit
         if(dataHistory.length >= maxHistoryItems){
             dataHistory.splice(0, 1);
         }

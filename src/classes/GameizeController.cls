@@ -64,6 +64,8 @@ public with sharing class GameizeController extends ETLC_ApexBridge_Abstract {
             }else if(fieldName == 'dataHistory__c'){
                 g.dataHistory__c = fieldData;
             }
+            //Check if existing record exists for the user
+            //If it does then use that to update the same record or create a new one
             List<Gameize__c> records = [SELECT ID From Gameize__c where User__c=:userId limit 1];
             if(records.size()>0){
                 g.Id = records[0].Id;

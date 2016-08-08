@@ -1,22 +1,22 @@
 ({
     handleShowGameEvent: function(component, event, helper){
+        var Gameize_Helper = component.find('Gameize_Helper_dialog');
         var SelectedGameId = event.getParam("SelectedGameId");
         //If there is pre selected game then show that game
         if(SelectedGameId >=0 ) {
             var gameList = component.get('v.gameList');
-            helper.loadGame(component, helper, gameList, helper.findGameIndexFromId(component, helper, gameList, SelectedGameId));
+            helper.loadGame(component, helper, Gameize_Helper, gameList, helper.findGameIndexFromId(component, helper, gameList, SelectedGameId));
         }
     },
     gameizeMe: function(component, event, helper){
         var Gameize_Helper = component.find('Gameize_Helper_dialog');        
-        Gameize_Helper.hideToast();
-        
         var gameList = component.get('v.gameList');
-        helper.loadGame(component, helper, gameList, helper.findGameIndexFromId(component, helper, gameList));
+        helper.loadGame(component, helper, Gameize_Helper, gameList, helper.findGameIndexFromId(component, helper, gameList));
     },
     markAsFavorite: function(component, event, helper){
         var Gameize_Helper = component.find('Gameize_Helper_dialog');
 
+        //If game is already marked favorite then set the flag to show proper buttons
         helper.markIfGameAlreadyFavorite(component, helper);
 
         if(component.get('v.isSelectedGameFavorite') == false){
@@ -33,19 +33,17 @@
 
         helper.markIfGameAlreadyFavorite(component, helper);
         
-        var dataFavorite = component.get('v.dataFavorite');
-        var gameSelected = component.get('v.gameSelected');
+        if(component.get('v.isSelectedGameFavorite') == true){
+        	var dataFavorite = component.get('v.dataFavorite');
+        	var gameSelected = component.get('v.gameSelected');
 
-        var wasRemoved = false;
-        for(var i=0; i<dataFavorite.length; i++){
-            if(dataFavorite[i].cmpname == gameSelected.cmpname){
-                dataFavorite.splice(i, 1);
-                wasRemoved = true;
-                break;
+            for(var i=0; i<dataFavorite.length; i++){
+                if(dataFavorite[i].cmpname == gameSelected.cmpname){
+                    dataFavorite.splice(i, 1);
+                    break;
+                }
             }
-        }
-
-        if(wasRemoved == true){
+        
             helper.saveFavorite(component, helper, Gameize_Helper, false, dataFavorite);
         }else{
             Gameize_Helper.showToast('message', 'NOT in Favorite List!', 'Game is not in favorite list.');

@@ -15,9 +15,9 @@
     <aura:handler event="c:Gameize_ShowGame" action="{!c.handleShowGameEvent}"/>
 
 
-    <form class="slds-form--inline">
-        <div class="slds-form-element">
-            <button class="slds-button slds-button--brand" type="button" onclick="{!c.gameizeMe}">Gameize me!</button>
+    <form class="slds-form--inline slds-text-align--center">
+        <div class="slds-form-element ">
+            <button class="slds-button slds-button--brand" type="button" onclick="{!c.gameizeMe}">Gameize!</button>
         </div>
     </form>
     <div role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-hide" aura:id="modaldialog">
