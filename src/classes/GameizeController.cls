@@ -38,39 +38,29 @@ public with sharing class GameizeController extends ETLC_ApexBridge_Abstract {
     public boolean saveUserData(ID userId, String userName,  String fieldName, String fieldData) {
         Boolean returnFlag = false;
         try {
-            String [] fields = new String [] {'Name', 'gameize__dataFavorite__c', 'gameize__dataHistory__c'};
-
-            //Although, ETLC_SecuredDB will check CRUD/FLS, we need to check Createable and updateable permissions for upsert
-            // Obtaining the field name/token map for the Contact object
-            Map<String,Schema.SObjectField> m = Schema.SObjectType.Gameize__c.fields.getMap();
-            for (String fieldToCheck: fields) {
-                // Check if the user has create access on the each field
-
-                //if not accessible then return false
-                //If not updatable then return false; update part of update
-                //If not createdable then return false; insert part of upsert
-                if (!m.get(fieldToCheck).getDescribe().isAccessible() ||
-                        !m.get(fieldToCheck).getDescribe().isUpdateable() ||
-                        !m.get(fieldToCheck).getDescribe().isCreateable()) {
-                    return false;
-                }
-            }
+            List<Gameize__c> dbRecords = new List<Gameize__c>();
 
             Gameize__c g = new Gameize__c();
             g.name = userName;
-            g.User__c = userId;
+            g.gameize__User__c = userId;
             if(fieldName == 'dataFavorite__c'){
-                g.dataFavorite__c = fieldData;
+                g.gameize__dataFavorite__c = fieldData;
             }else if(fieldName == 'dataHistory__c'){
-                g.dataHistory__c = fieldData;
+                g.gameize__dataHistory__c = fieldData;
             }
+
             //Check if existing record exists for the user
             //If it does then use that to update the same record or create a new one
             List<Gameize__c> records = [SELECT ID From Gameize__c where User__c=:userId limit 1];
             if(records.size()>0){
                 g.Id = records[0].Id;
             }
-            upsert g;
+            dbRecords.add(g);
+
+            //Use this class to do check for proper CRUD
+            ETLC_SecuredDB.performDML(ETLC_SecuredDB.Operation.Upserting, dbRecords);
+
+            //upsert g;
             if(apexBridgedata.debug){System.debug('GameizeController:saveData:g:: ' + g);  }
             returnFlag = true;
         }Catch(Exception e){ if (apexBridgedata.debug) { System.debug('GameizeController:fetchData:exception:: ' + e.getMessage());  }   }
@@ -86,7 +76,6 @@ public with sharing class GameizeController extends ETLC_ApexBridge_Abstract {
             if(records.size()>0){
                 //ETLC_SecuredDB.validateQuery(records);
                 returnData = records[0].Body.toString();
-                System.debug('returnData::'+returnData);
                 if(apexBridgedata.debug){System.debug('GameizeController:fetchData:returnData:: ' + returnData);  }
             }
         }Catch(Exception e){ if (apexBridgedata.debug) { System.debug('GameizeController:fetchData:exception:: ' + e.getMessage());  }   }
