@@ -3,7 +3,7 @@
         <div class="slds-form-element">
             <label class="slds-form-element__label" for="inputSample2">Please enter your age::</label>
             <div class="slds-form-element__control">
-                <ui:inputText aura:id="age" class="slds-input" placeholder="Example: (november 1,1966)" value="" />
+                <ui:inputText aura:id="age" class="slds-input" placeholder="Eg: (november 1,1966)" value="" />
             </div>
         </div>
         <div class="slds-form-element">

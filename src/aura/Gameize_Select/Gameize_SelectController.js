@@ -50,8 +50,6 @@
         }
     },
     hideModal : function(component, event, helper) {
-        //Toggle CSS styles for hiding Modal
-        helper.toggleClassInverse(component,'backdrop','slds-backdrop--');
-        helper.toggleClassInverse(component,'modaldialog','slds-fade-in-');
+        helper.hideModal(component, helper);
     }
 })

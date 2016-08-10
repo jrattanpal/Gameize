@@ -51,15 +51,14 @@
                         body.push(content);
                         container.set("v.body", body);
                         helper.saveInHistory(component, helper, gameSelected);
+                        
+                        helper.showModal(component, helper);
                     }else{
                         Gameize_Helper.showToast('error', 'Error!', 'Some error occurred while selecting a game');
                     }
                 }
             );
 
-            //Toggle CSS styles for opening Modal
-            helper.toggleClass(component,'backdrop','slds-backdrop--');
-            helper.toggleClass(component,'modaldialog','slds-fade-in-');
         }else{
             Gameize_Helper.showToast('error', 'Error!', 'Some error occurred while selecting a game');
         }
@@ -136,14 +135,24 @@
         cmpEvent.setParams({"whichData" : whichData, "data": data});
         cmpEvent.fire();
     },
+    showModal: function(component, helper){
+        //Toggle CSS styles for opening Modal
+        helper.toggleClass(component,'backdrop','slds-backdrop--');
+        helper.toggleClass(component,'modaldialog','slds-fade-in-');
+    },
+    hideModal: function(component, helper){
+        //Toggle CSS styles for hiding Modal
+        helper.toggleClassInverse(component,'backdrop','slds-backdrop--');
+        helper.toggleClassInverse(component,'modaldialog','slds-fade-in-');
+    },
     toggleClass: function(component,componentId,className) {
-        var modal = component.find(componentId);
+        var modal = component.find(componentId).getElement();
         $A.util.removeClass(modal,className+'hide');
         $A.util.addClass(modal,className+'open');
     },
 
     toggleClassInverse: function(component,componentId,className) {
-        var modal = component.find(componentId);
+        var modal = component.find(componentId).getElement();
         $A.util.addClass(modal,className+'hide');
         $A.util.removeClass(modal,className+'open');
     }
