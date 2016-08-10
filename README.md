@@ -8,6 +8,12 @@ Gameize is a collection of javascript games similar to http://www.javascriptkit.
  
 Idea is to allow users to take a break from work and have fun. Games are not graphic but rather old style text JS games (for now, others might eventually be added).  
 
+
+<img alt="BFFFollow - Diagram" src="resources/gameize_gameize.png" /><br/>
+ <img alt="BFFFollow - Diagram" src="resources/gameize_favorite.png" /><br/>
+ <img alt="BFFFollow - Diagram" src="resources/gameize_history.png" /><br/>
+ <img alt="BFFFollow - Diagram" src="resources/gameize_game.png" /><br/>
+
 ## Installation
 <a href="https://githubsfdeploy.herokuapp.com?owner=jrattanpal&repo=Gameize">
   <img alt="Deploy to Salesforce" src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
@@ -112,9 +118,6 @@ Components:
 	</ul>
 	</li>
 </ul>
-
-
-## Technical Specifications ##
 
 
 ## Credits
