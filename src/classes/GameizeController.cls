@@ -60,7 +60,6 @@ public with sharing class GameizeController extends ETLC_ApexBridge_Abstract {
             //Use this class to do check for proper CRUD
             ETLC_SecuredDB.performDML(ETLC_SecuredDB.Operation.Upserting, dbRecords);
 
-            //upsert g;
             if(apexBridgedata.debug){System.debug('GameizeController:saveData:g:: ' + g);  }
             returnFlag = true;
         }Catch(Exception e){ if (apexBridgedata.debug) { System.debug('GameizeController:fetchData:exception:: ' + e.getMessage());  }   }
