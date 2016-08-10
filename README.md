@@ -15,8 +15,7 @@ Idea is to allow users to take a break from work and have fun. Games are not gra
  <img alt="BFFFollow - Diagram" src="resources/gameize_game.png" /><br/>
 
 ## Installation
-<a href="https://githubsfdeploy.herokuapp.com?owner=jrattanpal&repo=Gameize" target="_blank">
-  <img alt="Deploy to Salesforce" src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+<a href="https://githubsfdeploy.herokuapp.com?owner=jrattanpal&repo=Gameize" target="_blank"> <img alt="Deploy to Salesforce" src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
 
 **Requirements**
