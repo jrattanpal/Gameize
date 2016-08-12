@@ -5,10 +5,6 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Gamezie</members>
-        <name>CustomTab</name>
-    </types>
-    <types>
         <members>*</members>
         <name>ApexClass</name>
     </types>
