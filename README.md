@@ -2,6 +2,19 @@
 Gameize = Game Randomize
 
 This component provides a collection of Javascript games which can be played randomly; for fun.
+ 
+
+## Installation
+<strong>Read Before Install</strong><br/>
+<ul>
+    <li>Make sure to give permisison on Gameize__c object fields to profile used in your org (even System Admin)</li>
+    <li>You might also need to add Custom Object tab</li>
+</ul>
+
+<a href="https://githubsfdeploy.herokuapp.com?owner=jrattanpal&repo=Gameize" target="_blank">
+    <img alt="Deploy to Salesforce" src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>
+
 
 ## Synopsis
 Gameize is a collection of javascript games similar to http://www.javascriptkit.com/script/cutindex22.shtml, but converted to work in Lightning Components Framework. 
@@ -13,11 +26,6 @@ Idea is to allow users to take a break from work and have fun. Games are not gra
  <img alt="BFFFollow - Diagram" src="resources/gameize_favorite.png" /><br/>
  <img alt="BFFFollow - Diagram" src="resources/gameize_history.png" /><br/>
  <img alt="BFFFollow - Diagram" src="resources/gameize_game.png" /><br/>
-
-## Installation
-<a href="https://githubsfdeploy.herokuapp.com?owner=jrattanpal&repo=Gameize" target="_blank">
-    <img alt="Deploy to Salesforce" src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
-</a>
 
 **Requirements**
 <ul>
