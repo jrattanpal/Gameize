@@ -38,7 +38,7 @@
 
         if(typeof(gameSelected) != undefined) {
             $A.createComponent(
-                "gameize:Gameize_Game_"+gameSelected.cmpname,
+                "c:Gameize_Game_"+gameSelected.cmpname,
                 {
                     "aura:id": gameSelected.auraid,
                 },
