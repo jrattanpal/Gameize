@@ -2,7 +2,7 @@
     letsCount: function(component, event, helper){
         var today = new Date()
         var BirthDay = new Date(component.find('age').get('v.value'));
-        console.log(BirthDay);
+        
         var timeold = (today.getTime() - BirthDay.getTime());
         var sectimeold = timeold / 1000;
         var secondsold = Math.floor(sectimeold);

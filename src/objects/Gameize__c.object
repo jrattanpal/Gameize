@@ -21,10 +21,6 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -47,16 +43,19 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
         <fullName>User__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>User</label>
         <referenceTo>User</referenceTo>
@@ -67,6 +66,7 @@
     </fields>
     <fields>
         <fullName>dataFavorite__c</fullName>
+        <deprecated>false</deprecated>
         <description>JSON data of favorite games for a user</description>
         <externalId>false</externalId>
         <inlineHelpText>JSON data of favorite games for a user</inlineHelpText>
@@ -78,6 +78,7 @@
     </fields>
     <fields>
         <fullName>dataHistory__c</fullName>
+        <deprecated>false</deprecated>
         <description>History game data for user</description>
         <externalId>false</externalId>
         <inlineHelpText>History game data for user</inlineHelpText>

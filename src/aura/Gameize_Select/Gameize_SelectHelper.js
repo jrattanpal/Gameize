@@ -20,7 +20,7 @@
                 }
             }
         }
-        return Math.floor(Math.random()*gameList.length);
+        return Math.floor(Math.random()*gameList.length); 
     },
     loadGame: function(component, helper, Gameize_Helper, gameList, gameSelectedIndex){
         //Hide any existing Toast message
@@ -38,7 +38,7 @@
 
         if(typeof(gameSelected) != undefined) {
             $A.createComponent(
-                "c:Gameize_Game_"+gameSelected.cmpname,
+                "gameize:Gameize_Game_"+gameSelected.cmpname,
                 {
                     "aura:id": gameSelected.auraid,
                 },

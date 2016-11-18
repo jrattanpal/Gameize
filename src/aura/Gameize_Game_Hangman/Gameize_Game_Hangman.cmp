@@ -1,7 +1,18 @@
 <aura:component >
     <aura:attribute name="lettersFirstRow" type="String[]" default="A,B,C,D,E,F,G,H,I,J,K,L,M" />
     <aura:attribute name="lettersSecondRow" type="String[]" default="N,O,P,Q,R,S,T,U,V,W,X,Y,Z" />
-    
+
+    <!-- Need to use these variables as we can't use global "window." variables in a managed package -->
+    <aura:attribute name="words" type="Object[]" />
+    <aura:attribute name="alpha" type="Object[]" />
+    <aura:attribute name="bravo" type="Object[]" />
+    <aura:attribute name="running" type="Integer" default="0"/>
+    <aura:attribute name="failnum" type="Integer" default="0" /> 
+    <aura:attribute name="advising" type="Integer" default="0"/>
+    <aura:attribute name="index" type="Integer" default="0" />
+    <aura:attribute name="alpha_index" type="Integer" default="0" />
+    <aura:attribute name="bravo_index" type="Integer" default="0" />
+
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     
     <fieldset class="slds-form--compound">

@@ -22,10 +22,10 @@ public with sharing class GameizeController_Test {
     @isTest
     static void saveUserData_test_runas_negative_null_data(){
         Profile p = [select id from profile where name='Standard User'];
-        User u = new User(Alias = 'standt', Email='standarduser@testorg.com',
+        User u = new User(Alias = 'standt', Email='tandarduser@testorg.gameize',
                 EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US',
                 LocaleSidKey='en_US', ProfileId = p.Id,
-                TimeZoneSidKey='America/Los_Angeles', UserName='standarduser@testorg.com');
+                TimeZoneSidKey='America/Los_Angeles', UserName='tandarduser@testorg.gameize');
         System.runAs(u){
             List<Gameize__c> g = [select id from Gameize__c];
             System.assertEquals(0, g.size(), 'There should 0 Gameize records');
@@ -150,10 +150,10 @@ public with sharing class GameizeController_Test {
         PermissionSet ps = [ select Id from PermissionSet where Name = 'Gameize_Permissions' ];
 
         Profile p = [select id from profile where name='Standard User'];
-        User u = new User(Alias = 'standt', Email='standarduser@testorg.com',
+        User u = new User(Alias = 'standt', Email='tandarduser@testorg.gameize',
                 EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US',
                 LocaleSidKey='en_US', ProfileId = p.Id,
-                TimeZoneSidKey='America/Los_Angeles', UserName='standarduser@testorg.com');
+                TimeZoneSidKey='America/Los_Angeles', UserName='tandarduser@testorg.gameize');
         insert u;
         PermissionSetAssignment assignment = new PermissionSetAssignment( AssigneeId = u.Id, PermissionSetId = ps.Id);
         insert assignment;
@@ -167,10 +167,10 @@ public with sharing class GameizeController_Test {
         PermissionSet ps = [ select Id from PermissionSet where Name = 'Gameize_Permissions' ];
 
         Profile p = [select id from profile where name='Standard User'];
-        User u = new User(Alias = 'standt', Email='standarduser@testorg.com',
+        User u = new User(Alias = 'standt', Email='tandarduser@testorg.gameize',
                 EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US',
                 LocaleSidKey='en_US', ProfileId = p.Id,
-                TimeZoneSidKey='America/Los_Angeles', UserName='standarduser@testorg.com');
+                TimeZoneSidKey='America/Los_Angeles', UserName='tandarduser@testorg.gameize');
         insert u;
         PermissionSetAssignment assignment = new PermissionSetAssignment( AssigneeId = u.Id, PermissionSetId = ps.Id);
         insert assignment;
@@ -219,10 +219,10 @@ public with sharing class GameizeController_Test {
     @isTest
     static void fetchUserData_test_runas_negative(){
         Profile p = [select id from profile where name='Standard User'];
-        User u = new User(Alias = 'standt', Email='standarduser@testorg.com',
+        User u = new User(Alias = 'standt', Email='tandarduser@testorg.gameize',
                         EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US',
                         LocaleSidKey='en_US', ProfileId = p.Id,
-                        TimeZoneSidKey='America/Los_Angeles', UserName='standarduser@testorg.com');
+                        TimeZoneSidKey='America/Los_Angeles', UserName='tandarduser@testorg.gameize');
         System.runAs(u){
             fetchUserData_test_negative();
         }
@@ -232,10 +232,10 @@ public with sharing class GameizeController_Test {
         PermissionSet ps = [ select Id from PermissionSet where Name = 'Gameize_Permissions' ];
 
         Profile p = [select id from profile where name='Standard User'];
-        User u = new User(Alias = 'standt', Email='standarduser@testorg.com',
+        User u = new User(Alias = 'standt', Email='tandarduser@testorg.gameize',
                 EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US',
                 LocaleSidKey='en_US', ProfileId = p.Id,
-                TimeZoneSidKey='America/Los_Angeles', UserName='standarduser@testorg.com');
+                TimeZoneSidKey='America/Los_Angeles', UserName='tandarduser@testorg.gameize');
         insert u;
         PermissionSetAssignment assignment = new PermissionSetAssignment( AssigneeId = u.Id, PermissionSetId = ps.Id);
         insert assignment;
@@ -248,10 +248,10 @@ public with sharing class GameizeController_Test {
     static void fetchUserData_test_runas_without_permission_set(){
 
         Profile p = [select id from profile where name='Standard User'];
-        User u = new User(Alias = 'standt', Email='standarduser@testorg.com',
+        User u = new User(Alias = 'standt', Email='tandarduser@testorg.gameize',
                 EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US',
                 LocaleSidKey='en_US', ProfileId = p.Id,
-                TimeZoneSidKey='America/Los_Angeles', UserName='standarduser@testorg.com');
+                TimeZoneSidKey='America/Los_Angeles', UserName='tandarduser@testorg.gameize');
 
         System.runAs(u){
             Gameize__c g = new Gameize__c();
