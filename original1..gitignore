@@ -1,0 +1,9 @@
+
+.gitignore
+.idea/
+Gameize.iml
+IlluminatedCloud/
+config/
+Gameize.sublime-project
+Gameize.sublime-workspace
+debug/

@@ -1,4 +1,4 @@
-<aura:application description="DemoApp">
+<aura:application description="DemoApp" extends="force:slds">
     <c:Gameize debug="true" maxHistoryItems="10" />
     
     <!--

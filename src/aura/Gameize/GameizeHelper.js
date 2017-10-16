@@ -10,7 +10,11 @@
                 debug: component.get('v.debug')
             },
             callBackMethod: function (data) {
+                component.find('Gameize_Helper').log('GameizeHelper:fetchUserData(): ' + data.outputFlag);
                 if (data.outputFlag == true) {
+                    component.find('Gameize_Helper').log('GameizeHelper:fetchUserData(): ' + data.output.gameize__dataFavorite__c);
+                    component.find('Gameize_Helper').log('GameizeHelper:fetchUserData(): ' + data.output.gameize__dataHistory__c);
+
                     if(typeof(data.output.gameize__dataFavorite__c) != 'undefined') {
                         component.set('v.dataFavorite', JSON.parse(data.output.gameize__dataFavorite__c));
                     }

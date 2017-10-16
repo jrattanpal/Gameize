@@ -23,9 +23,14 @@
         }
     },
     handleShowGameEvent: function(component, event, helper){
-        //Event is raised When a game is selected from favorite and history
-        //We always need first tab to show the game
-        component.set('v.activeTabNumber', '1');
+        var tabset = component.find('tabset');
+        tabset.set('v.selectedTabId', 'tab1');
+
+        /*
+        $A.util.addClass(component.find('tab1'), 'slds-active');
+        $A.util.removeClass(component.find('tab2'), 'slds-active');
+        $A.util.removeClass(component.find('tab3'), 'slds-active');
+        */
     }
 
 })
